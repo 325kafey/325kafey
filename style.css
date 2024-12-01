@@ -1,159 +1,304 @@
-*{
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
-.all-content{
-    background: #f7f5f2;
+
+body {
+    padding-top: 70px; /* Adjust for fixed navbar height */
+    background-color: #f4f4f4;
 }
-html ::-webkit-scrollbar-track{
-    background: transparent;
+
+.all-content {
+    position: relative;
 }
-html ::-webkit-scrollbar-thumb{
-    background: #88827f;
-    border-radius: 10px;
-}
-html ::-webkit-scrollbar{
+
+/* Scrollbar Customization */
+html ::-webkit-scrollbar {
     width: 10px;
 }
 
-/* navbar start */
-#navbar{
-    background-color: #908c8a;
+html ::-webkit-scrollbar-track {
+    background: transparent;
 }
-#logo img{
+
+html ::-webkit-scrollbar-thumb {
+    background: #111;
     border-radius: 10px;
-    width: 100px;
-    margin-left: 40px;
-    display: block; 
 }
-.navbar-nav{
-    margin-left: 50px;
-}
-.nav-item .menu-btn{
-    color: black;
-    margin-left: 10px;
-    font-weight: bold;
-    transition: 0.5s;
-    text-decoration: none;
-}
-.nav-item .menu-btn:hover{
-    background: #f7f5f2;
-    border-radius: 5px;
-    padding: 5px;
-    color: black;
-}
-#navbar form button{
-    background: black;
-    color: white;
-    border: 1px solid white;
-}
-/* navbar end */
 
-
-
-
-
-
-
-
-/* home section start */
-#home{
+/* Navbar Styling */
+header {
+    position: fixed;
+    top: 0;
     width: 100%;
-    height: 90vh;
-    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(./images/bg2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 88%;
+    background-color: #111;
+    z-index: 9999;
+    padding: 10px;
+    border: none; /* No border on navbar */
+    box-shadow: none; /* No shadow on navbar */
 }
-#home .content{
-    padding-top: 200px;
-    margin-left: 56px;
-}
-.home .content h3{
-    font-size: 50px;
-    color: white;
-}
-.home .content p{
-    margin-top: 10px;
-    color: rgb(234, 222, 222);
-}
-#btn{
+
+#logo img {
+    border-radius: 50px;
     width: 150px;
-    height: 36px;
-    margin-top: 20px;
-    background: white;
-    border-radius: 5px;
-    font-weight: bold;
+    height: auto;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-item a {
+    color: #f4f4f4;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px;
+    text-decoration: none; /* No underline on links */
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: #888381;
+}
+
+.navbar-toggler {
     border: none;
-    transition: 0.5s ease;
+}
+
+.navbar-toggler span {
+    color: #f4f4f4;
+}
+
+.form-control {
+    width: 150px;
+    border: none; /* Removes search box border */
+    outline: none; /* Removes focus outline */
+}
+
+button.btn-outline-success {
+    border-color: transparent; /* Makes button border transparent */
+    color: #f4f4f4;
+}
+
+button.btn-outline-success:hover {
+    background-color: #888381;
+    color: #f4f4f4;
+}
+
+/* Home Section */
+#home {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./images/bg01.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#home .content {
+    text-align: left; /* Align text to the left */
+    max-width: 600px;
+    color: #f4f4f4;
+}
+
+#home h3 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 20px;
+}
+
+#btn {
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-#btn:hover{
-    background: #908c8a;
-    color: white;
+
+#btn a {
+    text-decoration: none;
+    color: black;
 }
-/* home section end */
 
+#btn:hover {
+    background-color: #888381;
+    color: #f4f4f4;
+}
 
+/* Media Queries */
+@media (max-width: 768px) {
+    #logo img {
+        width: 120px;
+    }
 
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .nav-item {
+        margin: 5px 0;
+    }
 
+    .form-control {
+        width: 120px;
+    }
 
+    #home h3 {
+        font-size: 36px;
+    }
 
+    #home p {
+        font-size: 18px;
+    }
+}
 
+@media (max-width: 576px) {
+    #btn {
+        padding: 8px 15px;
+    }
+
+    #home h3 {
+        font-size: 28px;
+    }
+
+    #home p {
+        font-size: 16px;
+    }
+
+    .form-control {
+        width: 100px;
+    }
+}
+
+/* Home Section end */
 
 
 /* about section start */
-#about{
+#about {
     width: 100%;
     height: 100vh;
+    display: flex;
+    padding: 20px;
+    background-color: #111; /* Very dark gray instead of pure black */
+    color: #f4f4f4; /* Softer off-white text */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
 }
-#about .container{
-    padding-top: 70px;
+
+#about .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #111; /* Match the section background */
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px; /* Ensures the container doesn't get too wide */
+    height: auto;
 }
-.heading{
+
+.heading {
     text-align: center;
-    margin-bottom: 50px;
-    color: black;
+    margin-bottom: 30px;
+    color: #f4f4f4; /* Softer white */
     font-size: 50px;
     font-weight: bold;
 }
-.heading span{
-    color: #908c8a;
+
+.heading span {
+    color: #f4f4f4; /* Softer white */
 }
-#about .card{
+
+#about .card {
     border-radius: 10px;
-}#about .card img{
+    overflow: hidden; /* Ensures rounded corners on the image */
+    height: 300px; /* Set the height for the image container */
+    width: 100%; /* Ensures the image container spans the full width */
+}
+
+#about .card img {
+    width: 100%; /* Ensures the image takes the full width of its container */
+    height: 100%; /* Ensures the image fills the height of the card */
+    object-fit: cover; /* Ensures the image covers the container area without distortion */
     border-radius: 10px;
 }
-#myBtn{
-    width: 200px;
-    height: 36px;
-    background: transparent;
-    border: 2px solid #908c8a;
-    color: #908c8a;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: 0.5s;
-    cursor: pointer;
+
+#about .text-content {
+    padding: 20px;
+    color: #d1d1d1; /* Light gray for better readability */
+    font-size: 18px; /* Adjust text size for readability */
+    line-height: 1.6; /* Adjust line spacing for better readability */
+    max-width: 600px; /* Limit max width of the text content */
+    margin-top: 20px; /* Space between the image and the text content */
 }
-#myBtn:hover{
-    background-color: #908c8a;
-    color: white;
+
+#about h3 {
+    color: #f4f4f4; /* Softer white for headings */
+    font-size: 28px;
+    margin-bottom: 20px;
 }
-@media screen and (max-width:982px){
-    #about p{
-        font-size: 8px;
+
+#about p {
+    color: #d1d1d1; /* Light gray for paragraphs */
+    font-size: 13px;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 992px) {
+    .heading {
+        font-size: 40px; /* Slightly smaller font on medium screens */
+    }
+
+    #about p {
+        font-size: 16px; /* Adjust paragraph text size for better readability */
+    }
+
+    #about h3 {
+        font-size: 24px; /* Slightly smaller heading font on smaller screens */
+    }
+
+    .text-content {
+        padding: 15px; /* Slightly reduced padding on smaller screens */
     }
 }
-@media screen and (max-width:766px){
-    #about p{
+
+@media screen and (max-width: 766px) {
+    #about p {
         font-size: 15px;
     }
-    #about{
-        height: 120vh;
+
+    #about {
+        height: auto; /* Adjust height to prevent overflow on smaller screens */
+    }
+
+    .heading {
+        font-size: 30px; /* Smaller heading for mobile screens */
+    }
+
+    #about .card img {
+        height: 200px; /* Adjust image size on smaller screens */
+    }
+
+    .text-content {
+        padding: 10px; /* Reduced padding for mobile screens */
     }
 }
 
@@ -164,197 +309,723 @@ html ::-webkit-scrollbar{
 
 
 
-
-
 /* top cards start */
-#top-cards{
+#top-cards {
     width: 100%;
-   /* height: 60vh; */
-    background: #f7f5f2;
+    padding: 60px 20px;
+    background: #111;
 }
-.heading2{
-    color: black;
+
+.heading2 {
+    color: #f4f4f4;
     text-align: center;
     font-size: 50px;
     font-weight: bold;
+    margin-bottom: 30px;
 }
-.heading2 span{
-    color: #908c8a;
+
+.heading2 span {
+    color: #f4f4f4; /* Accent color for the span */
 }
-#top-cards .container{
+
+#top-cards .container {
     margin-top: 30px;
 }
-#top-cards .card{
-    border-radius: 40px;
-    transition: 0.5s;
+
+#top-cards .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Even space between cards */
+}
+
+#top-cards .card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Added transition for background color */
     cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center; /* Center the image inside the card */
+    align-items: center;
+    position: relative;
+    background-color: #f4f4f4; /* Default background for the card */
 }
-#top-cards .card img{
-    border-radius: 40px;
+
+#top-cards .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
 }
-#top-cards .card:hover{
-    transform: translatey(-5px);
+
+#top-cards .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    background-color: #000; /* Black background on hover */
 }
+
+#top-cards .card:hover img {
+    opacity: 0.7; /* Reduce image opacity to create the hover effect */
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    #top-cards .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .heading2 {
+        font-size: 40px; /* Slightly smaller heading */
+    }
+
+    #top-cards .card {
+        width: 90%; /* Make the cards full width on smaller screens */
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .heading2 {
+        font-size: 30px; /* Smaller font size on very small screens */
+    }
+
+    #top-cards .card {
+        width: 100%; /* Full-width cards on extra small screens */
+        margin-bottom: 15px; /* Reduced space between cards */
+    }
+
+    #top-cards .card img {
+        height: 250px; /* Limit image height on smaller screens */
+    }
+}
+
 /* top cards end */
 
 
-
 /* product section start */
-#product{
-    width: 100%;
-}
-.heading4{
+/* Updated Product Slider Styles */
+.heading4 {
     text-align: center;
-    color: #908c8a;
-    font-size: 50px;                                                                                      
-    padding-top: 100px; 
-    border-bottom: 2px solid #908c8a;
+    font-size: 50px;
+    font-weight: bold;
+    color: #f4f4f4; /* White text for the heading */
+    margin-bottom: 20px;
 }
-#container3{
-    margin-top: 30px;
-    transition: all 0.5s ease;
-    
-}
-.card {
-    transition: all 0.5s ease;
-}
-.card:hover{
-    box-shadow: 1px 1px 10px 1px black;
-    transform: translatey(-5px);
+.product .heading4 span{
+    color: #bbb73c; /* Accent color for the span */
 }
 
-#product h3{
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    background-color: #111; /* Black background for the slider container */
+}
+
+.slider-container {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card {
+    flex: 0 0 20%; /* Show 5 cards at a time */
+    margin: 10px;
     text-align: center;
-    color: black;
-    font-size: 20px;
+    background: #111; /* Black background for each card */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    position: relative;
+    border: 2px solid transparent; /* Default border is transparent */
 }
-#product p{
-    color: black;
-    padding-top: 10px;
+
+.card.selected {
+    border-color: #f4f4f4; /* White border when selected */
 }
-#product p span{
-    float: right;
+
+.card .image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 200px; /* Fixed height for better control */
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures image is fully contained within the box */
+    transition: transform 0.3s ease-in-out;
+}
+
+.card .image-wrapper:hover img {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.card h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #f4f4f4; /* White text for the product name */
+}
+
+.card p {
+    font-size: 12px;
+    color: #000; /* Light gray text for the description */
+    margin: 3px 0;
+}
+
+.card .prices {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.card .prices p {
+    margin: 3px 0;
+    color: #000; /* Light gray text for prices */
+}
+
+.card .prices span {
+    font-weight: bold;
+    color: #000; /* Price color */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #111;
+    border: none;
+    color: #f4f4f4;
+    font-size: 18px;
     cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover,
+button.next:hover {
+    background-color: #111;
+}
+
+/* Hover Effect for the Cards */
+.card:hover {
+    background-color: #111; /* Darker background on hover */
+    cursor: pointer;
+}
+
+/* Active state when the card is clicked (selected) */
+.card.selected {
+    background-color: #f4f4f4; /* White background when selected */
+    color: #000; /* Black text color when selected */
+    border: 2px solid #f4f4f4; /* White border when selected */
+}
+
+.card.selected h3,
+.card.selected p,
+.card.selected .prices {
+    color: #000; /* Ensure text is black when selected */
 }
 
 /* product section end */
 
 
-
-
-/* our gallery start */
-#gallery{
+/* Bread section start */
+/* Bread Section Styles */
+#bread {
     width: 100%;
+    padding: 60px 20px;
+    background-color: #111; /* Black background for the bread section */
+    color: #f4f4f4; /* White text */
 }
-.heading5{
+
+#bread .container {
     text-align: center;
-    color: black;
-    margin-top: 60px;
+}
+
+#bread .heading {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #f4f4f4; /* Accent color for the heading */
+}
+
+#bread .heading span {
+    color: #f4f4f4; /* Accent color for "Breads" */
+}
+
+#bread .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Spread items evenly in a row */
+    gap: 20px; /* Add gap between items */
+}
+
+/* Bread Item Styling */
+#bread .bread-item {
+    text-align: center;
+    background-color: #bbb73c; /* Yellow background for the bread items */
+    border-radius: 12px; /* Slightly smaller border-radius for a more compact look */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    padding: 10px; /* Reduced padding for a more compact box */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to the top */
+    flex: 0 0 30%; /* Bread items take up 30% of the row */
+    margin-bottom: 20px;
+}
+
+#bread .bread-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+}
+
+/* Image Styling */
+.bread-img {
+    width: 100%;
+    height: auto; /* Maintains image aspect ratio */
+    object-fit: contain; /* Ensures the image fits well within the container */
+    border-radius: 8px;
+    margin-bottom: 5px; /* Reduced space between image and text */
+    max-height: 250px; /* Prevents images from becoming too large */
+    object-position: center; /* Keeps the image centered if there’s empty space */
+}
+
+/* Heading Styling for Items */
+#bread h4 {
+    font-size: 20px;
+    color: #000; /* Darker text for bread name */
+    margin-top: 5px; /* Reduced space between image and heading */
+}
+
+/* Price Styling for Items */
+#bread p {
+    font-size: 16px;
+    color: #000; /* Accent color for price */
+    margin-top: 0px; /* Remove the space between the name and price */
+    padding-top: 0px; /* Ensure no padding is added */
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    #bread .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bread-img {
+        max-height: 200px; /* Adjust image height for smaller screens */
+    }
+
+    #bread h4 {
+        font-size: 18px;
+    }
+
+    #bread p {
+        font-size: 16px;
+    }
+
+    #bread .bread-item {
+        flex: 0 0 45%; /* Bread items take up more space on medium screens */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #bread .bread-item {
+        flex: 0 0 100%; /* Make items full-width on small screens */
+        margin-bottom: 15px;
+    }
+
+    #bread h4 {
+        font-size: 18px; /* Adjust bread name size */
+    }
+
+    #bread p {
+        font-size: 14px; /* Adjust price size */
+    }
+}
+/* Bread section end */
+
+
+
+/* Our Gallery Start */
+/* Global Styles */
+body {
+    background-color: black !important; /* Black background for the entire page */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Gallery Section Styles */
+#gallery {
+    width: 100%;
+    background-color: #111; /* Black background for gallery section */
+    padding: 30px 0; /* Add padding for spacing */
+}
+
+.heading5 {
+    text-align: center;
+    color: #f4f4f4; /* Set color for "Gallery" heading */
+    margin-top: 30px;
     font-size: 50px;
     font-weight: bold;
 }
-#container4{
-    margin-top: 30px;
-}
-#gallery .heading5 span{
-    color: #908c8a;
-}
-#gallery .card{
-    border-radius: 10px;
-    margin: 10px;
-}
-#gallery .card:hover{
-    box-shadow: 1px 1px 10px 1px black;
-    transform: translatey(-5px);
-}
-#gallery .card img{
-    border-radius: 20px;
-    cursor: pointer;
+
+#gallery .heading5 span {
+    color: #f4f4f4; /* Set white color for the "Our" part of "Our Gallery" */
 }
 
-/* our gallery end */
+#gallery .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align the cards */
+    gap: 20px; /* Add spacing between cards */
+    margin-top: 20px;
+}
 
+#gallery .card {
+    background: #f4f4f4; /* White background for each card */
+    border-radius: 20px; /* Rounded corners for modern look */
+    overflow: hidden; /* Ensures images stay within the card */
+    width: 250px; /* Fixed width for cards */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better appearance */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+#gallery .card:hover {
+    box-shadow: 1px 1px 10px 1px black; /* Highlight effect on hover */
+    transform: translateY(-5px);
+}
+
+#gallery .card img {
+    width: 100%; /* Image takes up full card width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Restrict maximum height of images */
+    object-fit: cover; /* Crop image to fit card neatly */
+    object-position: center; /* Center the image */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #gallery .card {
+        width: 200px; /* Slightly smaller cards for tablets */
+    }
+
+    .heading5 {
+        font-size: 40px; /* Adjust heading size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #gallery .row {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center;
+    }
+
+    #gallery .card {
+        width: 90%; /* Make cards almost full-width */
+        max-width: 300px; /* Prevent cards from being too large */
+    }
+
+    .heading5 {
+        font-size: 30px; /* Further adjust heading size */
+    }
+}
+
+/* Our Gallery End */
+
+
+
+
+
+
+/* Our review start */
+/* Review Section */
+.review {
+    padding: 50px 20px; /* Adds space above and below the section */
+    background-color: #111; /* Black background for the entire section */
+    color: #f4f4f4; /* White text color */
+}
+
+/* Heading Styling */
+.review h1.heading {
+    text-align: center;
+    font-size: 2.5rem; /* Larger font for the heading */
+    color: #f4f4f4; /* White text */
+    margin-bottom: 40px; /* Adds space below the heading */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.review h1.heading span {
+    color: #f4f4f4; /* Yellow accent for the highlighted word */
+    font-weight: bold;
+}
+
+/* Box Container */
+.review .box-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    gap: 20px; /* Space between the boxes */
+    justify-content: center;
+    max-width: 1200px; /* Prevents the boxes from spreading too wide */
+    margin: 0 auto; /* Centers the container */
+}
+
+/* Review Boxes */
+.review .box-container .box {
+    flex: 1 1 30%; /* Each box takes 30% of the width */
+    min-width: 280px; /* Minimum width for smaller screens */
+    background-color: #f4f4f4; /* White background for the boxes */
+    color: #333; /* Dark text for the box content */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow for emphasis */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    text-align: center; /* Centers the content inside the boxes */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.review .box-container .box:hover {
+    transform: translateY(-10px); /* Moves the box up slightly on hover */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4); /* Darker shadow on hover */
+}
+
+/* Review Text */
+.review .box-container .box p {
+    font-size: 1rem; /* Adjusts font size for readability */
+    line-height: 1.6; /* Better line spacing */
+    margin-bottom: 15px; /* Adds spacing below the review text */
+}
+
+/* User Information */
+.review .box-container .box .user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.review .box-container .box .user img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%; /* Circular user image */
+    object-fit: cover; /* Ensures the image covers the circle */
+    margin-right: 10px; /* Space between the image and text */
+}
+
+.review .box-container .box .user h3 {
+    font-size: 1.1rem; /* Slightly larger name font */
+    color: #333;
+    margin: 0;
+}
+
+.review .box-container .box .user span {
+    font-size: 0.9rem;
+    color: #777; /* Light gray color for the role */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .review .box-container {
+        flex-direction: column; /* Stacks boxes vertically */
+        gap: 20px;
+    }
+
+    .review .box-container .box {
+        flex: 1 1 100%; /* Makes boxes full-width */
+    }
+}
+
+/* Our review end */
 
 
 
 /* contact start */
-#contact{
+/* Main Section for Contact and Footer */
+#contact-footer {
     width: 100%;
-    height: 100vh;
     padding-top: 70px;
+    padding-bottom: 50px;
+    background-color: #111;
 }
-#contact .container{
-    width: 100%;
-    height: 88vh;
-    background: linear-gradient(90deg, white 88%, #908c8a 20%);
-    border-radius: 10px;
+
+#contact-footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
 }
-.heading6{
+
+/* Contact Form Box */
+.contact-form {
+    width: 40%;  /* Reduced width to 40% */
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.contact-form .heading6 {
     font-size: 50px;
     font-weight: bold;
-    margin-top: 70px;
+    margin-top: 10px;
+    color: #000;
 }
-.heading6 span{
-    color: #908c8a;
+
+.contact-form .heading6 span {
+    color: #f4f4f4;
 }
-#contact p{
-    font-weight: bold;
-    font-size: 13px;
-    color: black;
+
+.contact-form p {
+    font-size: 14px;
+    color: #000;
+    margin-top: 10px;
 }
-#contact input{
-    width: 360px;
+
+.contact-form input {
+    width: 100%;
     border: none;
     border-bottom: 1px solid #908c8a;
+    padding: 10px;
+    margin-bottom: 10px;
 }
-#contact-btn{
-    width: 200px;
-    height: 36px;
+
+.contact-form #contact-btn {
+    width: 100%;
     background: transparent;
     border: 2px solid #908c8a;
-    color: #908c8a;
-    border-radius: 5px;
+    color: #000;
     font-weight: bold;
-    transition: 0.5s;
+    padding: 10px;
     cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
 }
-#contact-btn:hover{
-    background-color: #908c8a;
-    color: white;
+
+.contact-form #contact-btn:hover {
+    background-color: #000;
+    color: #f4f4f4;
 }
-#col{
-    width: 40%;
-    height: 56vh;
-    background-color: #d78c66;
-    margin-top: 78px;
+
+/* Contact Info Box */
+.contact-info {
+    width: 30%;  /* Reduced width to 30% */
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
-#contact h1{
-    color: white;
-    font-size: 25px;
-    margin-top: 10px;
-    margin-left: 10px;
+
+.contact-info h1 {
+    font-size: 20px;
+    color: #000;
 }
-#contact #col p{
-    font-size: 15px;
-    color: white;
-    margin-left: 13px;
-    margin-top: 30px;
+
+.contact-info p {
+    font-size: 14px;
+    color: #000;
+    margin-top: 15px;
 }
-@media screen and (max-width:766px){
-    #contact .container{
-        background: white;
+
+.contact-info .social-icon {
+    margin-right: 10px;
+    font-size: 20px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.contact-info .social-icon:hover {
+    color: #f4f4f4;
+    transform: scale(1.1);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #000;
+    padding: 20px 0;
+}
+
+footer .mb-3 {
+    margin-bottom: 20px;
+}
+
+footer i {
+    font-size: 30px;
+    color: #f4f4f4;
+    transition: color 0.3s, transform 0.3s;
+}
+
+footer i:hover {
+    color: #494948;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .contact-form, .contact-info {
+        width: 90%;  /* Adjust width for slightly smaller screens */
     }
-    #col{
+
+    .contact-info {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #contact-footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form,
+    .contact-info {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .contact-info .social-icon {
+        font-size: 18px;
+    }
+
+    .contact-form input, .contact-form #contact-btn {
         width: 100%;
-        background: #908c8a;
-    }
-    #contact{
-        height: 150vh;
     }
 }
-@media screen and (max-width:400px){
-    #contact input{
-        width: 250px;
+
+@media screen and (max-width: 400px) {
+    .contact-form input {
+        width: 90%;
     }
 }
+
 /* contact end */
