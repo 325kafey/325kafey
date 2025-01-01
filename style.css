@@ -964,7 +964,7 @@ body {
 }
 
 .contact-form form button:hover {
-    background-color: #888381; /* Slightly darker orange on hover */
+    background-color: #000; /* Slightly darker orange on hover */
 }
 /* Contact Info Section */
 .contact-info {
@@ -1010,7 +1010,7 @@ body {
 
 /* Hover Effect */
 .contact-info .social-icons-container a:hover {
-    color: #888381; /* Change color on hover */
+    color: #000; /* Change color on hover */
 }
 
 /* Icon Styles */
@@ -1062,7 +1062,7 @@ body {
 }
 
 .contact-form .heading6 span {
-    color: #766f6f; /* Color for the "US" part */
+    color: #000; /* Color for the "US" part */
 }
 
 /* Form Description Text */
@@ -1081,7 +1081,7 @@ body {
     border: 2px solid #000; /* Black border around the fields */
     background-color: #f5f5f5; /* Light gray background for visibility */
     font-size: 16px; /* Larger font for readability */
-    color: #333; /* Dark text inside fields */
+    color: #000; /* Dark text inside fields */
     border-radius: 5px; /* Rounded corners */
     box-sizing: border-box; /* Include padding in the width calculation */
 }
@@ -1097,7 +1097,7 @@ body {
     width: 100%; /* Full width button */
     padding: 15px;
     font-size: 18px;
-    background-color: #766f6f; /* Button background color */
+    background-color: #000; /* Button background color */
     color: #fff; /* Text color */
     border: none; /* Remove border */
     border-radius: 5px; /* Rounded corners */
@@ -1107,7 +1107,7 @@ body {
 
 /* Button Hover Effect */
 #contact-btn:hover {
-    background-color: #888381; /* Change to a darker shade on hover */
+    background-color: #000; /* Change to a darker shade on hover */
 }
 
 /* Responsive Design for Contact Form */
