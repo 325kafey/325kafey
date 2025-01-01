@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>325 KAFEY</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo7.png" type="image/jpeg">
     <!-- boostrap links -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -17,6 +17,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <!-- Linking Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
     <!-- fonts links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <!-- this is icon links -->
@@ -39,17 +42,12 @@
                         <li class="nav-item"><a href="#home" class="menu-btn">HOME</a></li>
                         <li class="nav-item"><a href="#about" class="menu-btn">ABOUT</a></li>
                         <li class="nav-item"><a href="#top-cards" class="menu-btn">CATEGORIES</a></li>
-                        <li class="nav-item"><a href="#product" class="menu-btn">PRODUCT</a></li>
+                        <li class="nav-item"><a href="#menu-section" class="menu-btn">MENU</a></li>
                         <li class="nav-item"><a href="#gallery" class="menu-btn">GALLERY</a></li>
-                       <li class="nav-item"><a href="#reviews" class="menu-btn">REVIEWS</a></li>
+                        <li class="nav-item"><a href="#reviews" class="menu-btn">REVIEWS</a></li>
                         <li class="nav-item"><a href="#contact-us" class="menu-btn">CONTACT</a></li>
 
                     </ul>
-                    
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
                 </div>
             </div>
         </nav>
@@ -64,7 +62,7 @@
             <div class="content text-center">
                 <h3 style="color: #f4f4f4; font-size: 80px;">Start Your Day With a <br> Fresh Coffee</h3>
                 <p style="color: #f4f4f4; font-size: 40px;"> Enjoy every sip of your coffee</p>
-                <button id="btn"><a href="#product">Visit Our Product</a></button>
+                <button id="btn"><a href="#menu-section">Visit Our Menu</a></button>
             </div>
         </section>
         <!-- home section end -->
@@ -74,36 +72,41 @@
 
 
         <!-- about section start -->
-        <section id="about">
+       <section id="about">
+            <!-- Heading at the top -->
+            <div class="heading">ABOUT <span>US</span></div>
+            
+            <!-- Main Content Container -->
             <div class="container">
-                <div class="heading">About <span>Us</span></div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <img src="./images/content01.jpg" alt="" width="100%;">
-                    </div>
-
-                    <div class="col-md-6">
-                        <h3>Whats Makes Our Coffee Special?</h3>
-                        <p>Our Goals to serve the best quality coffee, and foods ensuring a delightful experience for
+                <!-- Image Section -->
+                <div class="card">
+                    <img src="./images/content01.jpg" alt="A cup of happiness">
+                </div>
+        
+                <!-- Text Content Section --> 
+                <div class="text-content">
+                    <h3>Whats Makes Our Coffee Special?</h3>
+                    <p>
+                        Our Goals to serve the best quality coffee, and foods ensuring a delightful experience for
                             customers. To create a pleasant and inviting atmosphere where customers feel comfortable and
                             valued. To prioritize customer service, ensuring that every visitor leaves happy and
                             satisfied.
-                            <br>
-                        <p>The dream of starting a small business sparked while I was working at a private company. A
-                            laundry shop was my first choice, but the high capital cost (around 500k) was out of reach
-                            with my 15k savings. We decided to explore coffee shops instead, and after extensive
-                            research, we found a business model that worked for us. I experimented with different
-                            ingredients, discovering Nescafe was a perfect fit. We started small and have grown into a
-                            bigger shop, opening on July 18, 2023. God has blessed our business, and we continue to
-                            provide exquisite customer experiences.
-                        </p>
-
-                        <p>Our mission is to deliver an exceptional coffee experience through delicious products,
-                            personalized service, and a welcoming atmosphere. We strive for quality, character, and
-                            excellence in everything we do, treating both customers and our team with respect and
-                            dignity. To prioritize customer service, ensuring that every visitor leaves happy and satisfied.
-                        </p>
-                    </div>
+                    </p>
+                    <p>
+                        The dream of starting a small business sparked while I was working at a private company. A
+                        laundry shop was my first choice, but the high capital cost (around 500k) was out of reach
+                        with my 15k savings. We decided to explore coffee shops instead, and after extensive
+                        research, we found a business model that worked for us. I experimented with different
+                        ingredients, discovering Nescafe was a perfect fit. We started small and have grown into a
+                        bigger shop, opening on July 18, 2023. God has blessed our business, and we continue to
+                        provide exquisite customer experiences.
+                    </p>
+                    <p>
+                        Our mission is to deliver an exceptional coffee experience through delicious products,
+                        personalized service, and a welcoming atmosphere. We strive for quality, character, and
+                        excellence in everything we do, treating both customers and our team with respect and
+                        dignity. To prioritize customer service, ensuring that every visitor leaves happy and satisfied.
+                    </p>
                 </div>
             </div>
         </section>
@@ -118,7 +121,7 @@
 
         <!-- top cards start -->
         <section id="top-cards">
-            <div class="heading2">Top <span> Categories</span></div>
+            <div class="heading2">BEST <span> SELLER</span></div>
             <div class="container">
                 <div class="row">
 
@@ -139,221 +142,368 @@
                             <img src="./images/menu35.jpg" alt="">
                         </div>
                     </div>
+                    
 
                 </div>
             </div>
         </section>
         <!-- top cards end -->
 
-        <!-- product starts -->
-        <div id="product" class="slider">
-            <h2 class="heading4">Our Products</h2>
-            <div class="slider-container">
-                <div class="slider-track">
-                    <div class="card">
-                        <div class="image-wrapper">
-                            <img src="images/item1.jpg" alt="Product 1">
-                        </div>
-                        <h3>Choclet</h3>
-                        <div class="prices">
-                            <p>Small: <span>₱45.00</span></p>
-                            <p>Medium: <span>₱55.00</span></p>
-                            <p>Large: <span>₱75.00</span></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="image-wrapper">
-                            <img src="images/item2.jpg" alt="Product 2">
-                        </div>
-                        <h3>Blueberry</h3>
-                        <div class="prices">
-                            <p>Small: <span>₱45.00</span></p>
-                            <p>Medium: <span>₱55.00</span></p>
-                            <p>Large: <span>₱75.00</span></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="image-wrapper">
-                            <img src="images/item3.jpg" alt="Product 2">
-                        </div>
-                        <h3>Mango</h3>
-                        <div class="prices">
-                            <p>Small: <span>₱45.00</span></p>
-                            <p>Medium: <span>₱55.00</span></p>
-                            <p>Large: <span>₱75.00</span></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="image-wrapper">
-                            <img src="images/item4.jpg" alt="Product 2">
-                        </div>
-                        <h3>Coke Float</h3>
-                        <div class="prices">
-                            <p>Small: <span>₱40.00</span></p>
-                            <p>Large: <span>₱60.00</span></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="image-wrapper">
-                            <img src="images/menu52.jpg" alt="Product 2">
-                        </div>
-                        <h3>Cookie n' Cream</h3>
-                        <div class="prices">
-                            <p>Small: <span>₱45.00</span></p>
-                            <p>Medium: <span>₱55.00</span></p>
-                            <p>Large: <span>₱75.00</span></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="image-wrapper">
-                            <img src="images/menu53.jpg" alt="Product 2">
-                        </div>
-                        <h3>Red Velvet</h3>
-                        <div class="prices">
-                            <p>Small: <span>₱45.00</span></p>
-                            <p>Medium: <span>₱55.00</span></p>
-                            <p>Large: <span>₱75.00</span></p>
+
+<!-- Product Section Start -->
+<div class="product-section" id="menu-section">
+    <!-- Menu Items Content -->
+    <div class="text-center wow fadeInUp">
+        <h2 class="section-title ff-secondary text-primary fw-normal">MENU ITEMS</h2>
+    </div>
+    <!-- Additional content for menu items -->
+</div>
+
+
+    <!-- Centered Selection Menu -->
+    <ul class="nav nav-pills justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="pill" href="#ice-coffee">
+                <i class="fa fa-coffee fa-2x text-primary"></i>
+                <div>
+                    <small class="text-white">Ice Coffee</small>
+                    <h6 class="mt-n1 mb-0 text-white">Drinks</h6>
+                </div>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="pill" href="#frappe">
+                <i class="fa fa-coffee fa-2x text-primary"></i>
+                <div>
+                    <small class="text-white">Frappe</small>
+                    <h6 class="mt-n1 mb-0 text-white">Drinks</h6>
+                </div>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="pill" href="#fruity-soda">
+                <i class="fa fa-coffee fa-2x text-primary"></i>
+                <div>
+                    <small class="text-white">Fizzy Soda</small>
+                    <h6 class="mt-n1 mb-0 text-white">Drinks</h6>
+                </div>
+            </a>
+        </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content">
+        <!-- Ice Coffee Tab -->
+        <div id="ice-coffee" class="tab-pane fade show active">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center product-card">
+                        <img src="images/menu.1.jpg" class="product-image rounded" alt="Caramel Iced Coffee">
+                        <div class="product-info ps-4">
+                            <h5 class="text-white">Vanilla Latte</h5>
+                            <div class="product-price">
+                                <p>Medium: <span>₱35.00</span></p>
+                                <p>Large: <span>₱55.00</span></p>
+                            </div>
+                            <small class="fst-italic text-white">
+                                A smooth and creamy blend of vanilla syrup and espresso, perfectly mixed with steamed milk.
+                            </small>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="image-wrapper">
-                            <img src="images/menu40.jpg" alt="Product 2">
-                        </div>
-                        <h3>Matcharappe</h3>
-                        <div class="prices">
-                            <p>Small: <span>₱45.00</span></p>
-                            <p>Medium: <span>₱55.00</span></p>
-                            <p>Large: <span>₱75.00</span></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="image-wrapper">
-                            <img src="images/menu42.jpg" alt="Product 2">
-                        </div>
-                        <h3>Caramel Macchiato</h3>
-                        <div class="prices">
-                            <p>Small: <span>₱45.00</span></p>
-                            <p>Medium: <span>₱55.00</span></p>
-                            <p>Large: <span>₱75.00</span></p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center product-card">
+                        <img src="images/menu41.jpg" class="product-image rounded" alt="Caramel Iced Coffee">
+                        <div class="product-info ps-4">
+                            <h5 class="text-white">Dirty Matcha</h5>
+                            <div class="product-price">
+                                <p>Medium: <span>₱35.00</span></p>
+                                <p>Large: <span>₱55.00</span></p>
+                            </div>
+                            <small class="fst-italic text-white">
+                                A bold blend of rich matcha and espresso, topped with creamy milk for a unique, flavorful twist.
+                            </small>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="image-wrapper">
-                            <img src="images/menu46.jpg" alt="Product 2">
-                        </div>
-                        <h3>Oreo Milk</h3>
-                        <div class="prices">
-                            <p>Medium: <span>₱35.00</span></p>
-                            <p>Large: <span>₱45.00</span></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="image-wrapper">
-                            <img src="images/menu43.jpg" alt="Product 2">
-                        </div>
-                        <h3>Strawberry</h3>
-                        <div class="prices">
-                            <p>Medium: <span>₱35.00</span></p>
-                            <p>Large: <span>₱45.00</span></p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center product-card">
+                        <img src="images/menu.2.jpg" class="product-image rounded" alt="Caramel Iced Coffee">
+                        <div class="product-info ps-4">
+                            <h5 class="text-white">Mocha Caramel</h5>
+                            <div class="product-price">
+                                <p>Medium: <span>₱35.00</span></p>
+                                <p>Large: <span>₱55.00</span></p>
+                            </div>
+                            <small class="fst-italic text-white">
+                                A decadent fusion of smooth mocha and caramel, creating the perfect indulgence for your taste buds.
+                            </small>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="image-wrapper">
-                            <img src="images/menu39.jpg" alt="Product 2">
-                        </div>
-                        <h3>Caramel Macchiato</h3>
-                        <div class="prices">
-                            <p>Medium: <span>₱35.00</span></p>
-                            <p>Large: <span>₱45.00</span></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="image-wrapper">
-                            <img src="images/menu41.jpg" alt="Product 2">
-                        </div>
-                        <h3>Dirty Matcha</h3>
-                        <div class="prices">
-                            <p>Small: <span>₱40.00</span></p>
-                            <p>Medium: <span>₱50.00</span></p>
-                            <p>Large: <span>₱60.00</span></p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center product-card">
+                        <img src="images/menu.3.png" class="product-image rounded" alt="Caramel Iced Coffee">
+                        <div class="product-info ps-4">
+                            <h5 class="text-white">Americano</h5>
+                            <div class="product-price">
+                                <p>Medium: <span>₱35.00</span></p>
+                                <p>Large: <span>₱55.00</span></p>
+                            </div>
+                            <small class="fst-italic text-white">
+                                 Bold and rich espresso, perfectly balanced with hot water for a smooth, full-bodied experience.
+                            </small>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="image-wrapper">
-                            <img src="images/item5_.jpg" alt="Product 2">
-                        </div>
-                        <h3>Blue Fizzy</h3>
-                        <div class="prices">
-                            <p>Medium: <span>₱35.00</span></p>
-                            <p>Large: <span>₱45.00</span></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="image-wrapper">
-                            <img src="images/item6.jpg" alt="Product 2">
-                        </div>
-                        <h3>Caramel Macchiato</h3>
-                        <div class="prices">
-                            <p>Medium: <span>₱35.00</span></p>
-                            <p>Large: <span>₱45.00</span></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="image-wrapper">
-                            <img src="images/item7.jpg" alt="Product 3">
-                        </div>
-                        <h3>Lychee Mugo</h3>
-                        <div class="prices">
-                            <p>Medium: <span>₱35.00</span></p>
-                            <p>Large: <span>₱45.00</span></p>
-                        </div>
-                    </div>
-                    <!-- Add more product cards as needed -->
                 </div>
             </div>
-            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="next" onclick="moveSlide(1)">&#10095;</button>
         </div>
-        
-          <!-- product starts -->
+
+        <!-- Frappe Tab -->
+        <div id="frappe" class="tab-pane fade">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center product-card">
+                        <img src="images/item3.jpg" class="product-image rounded" alt="Vanilla Frappe">
+                        <div class="product-info ps-4">
+                            <h5 class="text-white">Mango</h5>
+                            <div class="product-price">
+                                <p>Small: <span>₱45.00</span></p>
+                                <p>Medium: <span>₱55.00</span></p>
+                                <p>Large: <span>₱75.00</span></p>
+                            </div>
+                            <small class="fst-italic text-white">
+                                A refreshing mango blend with a smooth, creamy texture, perfect for a tropical treat.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center product-card">
+                        <img src="images/menu42.jpg" class="product-image rounded" alt="Mocha Iced Coffee">
+                        <div class="product-info ps-4">
+                            <h5 class="text-white">Caramel Macchiato</h5>
+                            <div class="product-price">
+                                <p>Medium: <span>₱35.00</span></p>
+                                <p>Large: <span>₱55.00</span></p>
+                            </div>
+                            <small class="fst-italic text-white">
+                                A delicious blend of rich coffee, sweet caramel, and creamy milk, 
+                                served chilled over ice for a smooth, indulgent taste.</small>
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center product-card">
+                        <img src="images/item1.jpg" class="product-image rounded" alt="Chocolate Frappe">
+                        <div class="product-info ps-4">
+                            <h5 class="text-white">Choclet</h5>
+                            <div class="product-price">
+                                <p>Small: <span>₱45.00</span></p>
+                                <p>Medium: <span>₱55.00</span></p>
+                                <p>Large: <span>₱75.00</span></p>
+                            </div>
+                            <small class="fst-italic text-white">
+                                A decadent chocolate frappe, rich, creamy, and blended to perfection.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center product-card">
+                        <img src="images/item2.jpg" class="product-image rounded" alt="Chocolate Frappe">
+                        <div class="product-info ps-4">
+                            <h5 class="text-white">Blueberry</h5>
+                            <div class="product-price">
+                                <p>Small: <span>₱45.00</span></p>
+                                <p>Medium: <span>₱55.00</span></p>
+                                <p>Large: <span>₱75.00</span></p>
+                            </div>
+                            <small class="fst-italic text-white">
+                                A refreshing blend of blueberries, creamy and smooth for a fruity indulgence.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center product-card">
+                        <img src="images/menu52.jpg" class="product-image rounded" alt="Chocolate Frappe">
+                        <div class="product-info ps-4">
+                            <h5 class="text-white">Cookies n' Cream</h5>
+                            <div class="product-price">
+                                <p>Small: <span>₱45.00</span></p>
+                                <p>Medium: <span>₱55.00</span></p>
+                                <p>Large: <span>₱75.00</span></p>
+                            </div>
+                            <small class="fst-italic text-white">
+                                A delightful blend of crunchy cookie bits and creamy frappe, topped with more cookies.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center product-card">
+                        <img src="images/menu53.jpg" class="product-image rounded" alt="Chocolate Frappe">
+                        <div class="product-info ps-4">
+                            <h5 class="text-white">Red Velvet</h5>
+                            <div class="product-price">
+                                <p>Small: <span>₱45.00</span></p>
+                                <p>Medium: <span>₱55.00</span></p>
+                                <p>Large: <span>₱75.00</span></p>
+                            </div>
+                            <small class="fst-italic text-white">
+                                A luxurious blend of red velvet flavor with a creamy, velvety finish.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center product-card">
+                        <img src="images/menu40.jpg" class="product-image rounded" alt="Chocolate Frappe">
+                        <div class="product-info ps-4">
+                            <h5 class="text-white">Matcharappe</h5>
+                            <div class="product-price">
+                                <p>Small: <span>₱45.00</span></p>
+                                <p>Medium: <span>₱55.00</span></p>
+                                <p>Large: <span>₱75.00</span></p>
+                            </div>
+                            <small class="fst-italic text-white">
+                                A smooth blend of matcha with a creamy base, creating a refreshing and unique twist.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center product-card">
+                        <img src="images/menu42.jpg" class="product-image rounded" alt="Chocolate Frappe">
+                        <div class="product-info ps-4">
+                            <h5 class="text-white">Caramel Frappuccino</h5>
+                            <div class="product-price">
+                                <p>Small: <span>₱45.00</span></p>
+                                <p>Medium: <span>₱55.00</span></p>
+                                <p>Large: <span>₱75.00</span></p>
+                            </div>
+                            <small class="fst-italic text-white">
+                                A sweet and creamy blend of caramel, iced coffee, and milk, blended to perfection and topped with whipped cream.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fruity Soda Tab -->
+        <div id="fruity-soda" class="tab-pane fade">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center product-card">
+                        <img src="images/item4.jpg" class="product-image rounded" alt="Strawberry Soda">
+                        <div class="product-info ps-4">
+                            <h5 class="text-white">Coke Float</h5>
+                            <div class="product-price">
+                                <p>Medium: <span>₱35.00</span></p>
+                                <p>Large: <span>₱45.00</span></p>
+                            </div>
+                            <small class="fst-italic text-white">
+                                A refreshing soda infused with strawberry flavor.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center product-card">
+                        <img src="images/menu43.jpg" class="product-image rounded" alt="Blueberry Soda">
+                        <div class="product-info ps-4">
+                            <h5 class="text-white">Strawberry</h5>
+                            <div class="product-price">
+                                <p>Medium: <span>₱35.00</span></p>
+                                <p>Large: <span>₱45.00</span></p>
+                            </div>
+                            <small class="fst-italic text-white">
+                                A refreshing soda with the sweet and tangy taste of ripe strawberries.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center product-card">
+                        <img src="images/item5_.jpg" class="product-image rounded" alt="Blueberry Soda">
+                        <div class="product-info ps-4">
+                            <h5 class="text-white">Blue Fizzy</h5>
+                            <div class="product-price">
+                                <p>Medium: <span>₱35.00</span></p>
+                                <p>Large: <span>₱45.00</span></p>
+                            </div>
+                            <small class="fst-italic text-white">
+                                A refreshing blue soda with a fizzy and fruity twist.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center product-card">
+                        <img src="images/item7.jpg" class="product-image rounded" alt="Blueberry Soda">
+                        <div class="product-info ps-4">
+                            <h5 class="text-white">Lychee Mugo</h5>
+                            <div class="product-price">
+                                <p>Medium: <span>₱35.00</span></p>
+                                <p>Large: <span>₱45.00</span></p>
+                            </div>
+                            <small class="fst-italic text-white">
+                                A sweet and refreshing lychee-flavored soda, perfect for a tropical escape.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Product Section End -->
+
+
+
+
 
           
 <!-- Bread Section Start -->
 <section id="bread">
     <div class="container">
-        <div class="heading">Snackhaus</div>
+        <div class="heading">SNACKS</div>
         <div class="row">
             <!-- Bread Item 1 -->
             <div class="col-md-4 bread-item">
-                <img src="./images/menu001.jpg" alt="Baguette" class="bread-img">
+                <img src="./images/picture3.png" alt="Baguette" class="bread-img">
                 <h4>Missy Mini Donut</h4>
                 <p> <span>₱35.00</span> </p>
             </div>
 
             <!-- Bread Item 2 -->
             <div class="col-md-4 bread-item">
-                <img src="./images/menu004.jpg" alt="Croissant" class="bread-img">
+                <img src="./images/picture5.png" alt="Croissant" class="bread-img">
                 <h4>Choffle</h4>
                 <p> <span>₱35.00</span> <span>₱50.00</span></p>
             </div>
 
             <!-- Bread Item 3 -->
             <div class="col-md-4 bread-item">
-                <img src="./images/menu11.jpg" alt="Almond Croissant" class="bread-img">
+                <img src="./images/picture7.png" alt="Almond Croissant" class="bread-img">
                 <h4>Nachos</h4>
                 <p> <span>₱35.00</span> <span>₱55.00</span></p>
             </div>
 
             <!-- Bread Item 4 -->
             <div class="col-md-4 bread-item">
-                <img src="./images/menu19.jpg" alt="Chocolate Croissant" class="bread-img">
+                <img src="./images/picture8.png" alt="Chocolate Croissant" class="bread-img">
                 <h4>Homemade Chewy Cookies</h4>
                 <p> Each <span>₱10.00</span></p>
             </div>
 
             <!-- Bread Item 5 -->
             <div class="col-md-4 bread-item">
-                <img src="./images/menu21.jpg" alt="Plain Croissant" class="bread-img">
+                <img src="./images/picture9.png" alt="Plain Croissant" class="bread-img">
                 <h4>Ulitimate Burger</h4>
                 <p>Burger: <span>₱40.00</span></p>
                 <p>Burger Egg: <span>₱50.00</span></p>
@@ -362,7 +512,7 @@
 
             <!-- Bread Item 6 -->
             <div class="col-md-4 bread-item">
-                <img src="./images/menu003.jpg" alt="Soft Rolls" class="bread-img">
+                <img src="./images/picture4.png" alt="Soft Rolls" class="bread-img">
                 <h4>French Fries</h4>
                 <p>Regular: <span>₱35.00</span></p>
                 <p>Medium: <span>₱45.00</span></p>
@@ -381,7 +531,7 @@
         <!-- our gallery start -->
             <!-- Gallery Section -->
             <div id="gallery">
-                <div class="heading5">Our <span>Gallery</span></div>
+                <div class="heading5">OUR <span>GALLERY</span></div>
                 <div class="row">
                     <!-- Example Cards -->
                     <div class="card">
@@ -408,6 +558,12 @@
                     <div class="card">
                         <img src="./images/menu24.jpg" alt="Gallery Image 6">
                     </div>
+                    <div class="card">
+                        <img src="./images/pic1.jpg" alt="Gallery Image 5">
+                    </div>
+                    <div class="card">
+                        <img src="./images/pic2.jpg" alt="Gallery Image 5">
+                    </div>
                 </div>
             </div>
         
@@ -416,91 +572,114 @@
 
 
 
-
-
-<!-- our review start -->
-<section class="review" id="reviews">
-    <!-- Heading for the review section -->
-    <h1 class="heading">Customer's <span>Review</span></h1>
-
-    <!-- Box container for the individual review boxes -->
-    <div class="box-container">
-        <!-- Individual review box -->
-        <div class="box">
-            <!-- Review description text -->
-            <p>
-                Kape pa lang, ang saya na nami gid ma-feel mo ang gid freshness kag quality sang ila kape.
-            </p>
-
-            <!-- User information (profile image, name, and role) -->
-            <div class="user">
-                <img src="images/image03.jpg" alt="">
-                <div class="user-info">
-                    <h3>Rosana Reyes Degracia</h3>
-                </div>
-            </div>
+<!-- Testimonial section-->
+<section class="review-section" id="reviews">
+    <!-- Title Section -->
+    <div class="section-title-wrapper">
+        <h2 class="section-title">CUSTOMERS'S<span> REVIEW</span></h2>
+    </div>
+    <div class="section-content">
+       <div class="slider-container swiper">
+        <div class="slider-wrapper">
+            <ul class="review-list swiper-wrapper">
+                <li class="review swiper-slide">
+                    <img src="images/image01.jpg" alt="User" class="user-image">
+                    <h3 class="name">Alison Coros</h3>
+                    <i class="feedback"> Kung stress ka perfect ang kape nila para magpahuway kag mag-relax.
+                         Sakto lng ang lasa, init kag comfort sa bawat tasa!</i>
+                </li>
+                <li class="review swiper-slide">
+                    <img src="images/image03.jpg" alt="User" class="user-image">
+                    <h3 class="name">Rosana Reyes Degracia</h3>
+                    <i class="feedback">  Kape pa lang, ang saya na nami gid ma-feel mo ang
+                        gid freshness kag quality sang ila kape.</i>
+                </li>
+                <li class="review swiper-slide">
+                    <img src="images/image02.jpg" alt="User" class="user-image">
+                    <h3 class="name">Ycel gallaza</h3>
+                    <i class="feedback"> Masarap ang donut nila ideal para magka-bonding ka with friends sa coffee!</i>
+                </li>
+                <li class="review swiper-slide">
+                    <img src="images/image04.jpg" alt="User" class="user-image">
+                    <h3 class="name">Ma Crisvy Joy Boron</h3>
+                    <i class="feedback"> Ang sarap ng lasa ng kape nakakawala ng antok at lalo na ang kanilang cookies!</i>
+                </li>
+                <li class="review swiper-slide">
+                    <img src="images/image05.jpg" alt="User" class="user-image">
+                    <h3 class="name">Stephene De Benito</h3>
+                    <i class="feedback"> Kape palang solve kana, sakto lng sa timpla at panlasa.</i>
+                </li>
+            </ul> 
             
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
         </div>
-
-        <!-- Duplicate of the first review box (repeat for multiple reviews) -->
-        <div class="box">
-            <p>
-                Kung stress ka perfect ang kape nila para magpahuway kag mag-relax. Sakto lng ang lasa, init kag comfort sa bawat tasa!
-            </p>
-            <div class="user">
-                <img src="images/image01.jpg" alt="">
-                <div class="user-info">
-                    <h3>Alison Coros</h3>
-                </div>
-            </div>
-        </div>
-
-        <!-- Another review box -->
-        <div class="box"> 
-            <p>
-                Masarap ang donut nila ideal para magka-bonding ka with friends sa coffee!
-            </p>
-            <div class="user">
-                <img src="images/image02.jpg" alt="">
-                <div class="user-info">
-                    <h3>Ycel Gallaza</h3>
-                </div>
-            </div>
-        </div>
-    </div> <!-- End of box-container -->
-</section> <!-- our review end -->
-
-
+       </div>
+    </div>
+</section>
 
 
 
 
 
         <!-- contact start -->
-       <!-- Contact and Footer Section -->
+<!-- Contact Section -->
 <section id="contact-footer">
     <div class="container" id="contact-us">
-        <!-- Contact Form Box -->
-        <div class="contact-form">
-            <div class="heading6">Contact <span>Us</span></div>
-            <p>Contact us and let’s make things better together. Get feedback! We value your presence.</p>
-            <input type="text" class="form-control" placeholder="Name" aria-label="default input example"><br>
-            <input type="email" class="form-control" placeholder="Email" aria-label="default input example"><br>
-            <input type="number" class="form-control" placeholder="Phone" aria-label="default input example"><br>
-            <button id="contact-btn">Send Message</button>
+        <!-- Map Section (on the left) -->
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d410.87852121689133!2d122.79264810626684!3d11.554919835074978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1734688098003!5m2!1sen!2sph" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
 
- <!-- Contact Info Box -->
+        <!-- Contact Form Box -->
+<div class="contact-form">
+    <div class="heading6">CONTACT <span>US</span></div>
+    <p>Contact us and let’s make things better together. Get feedback! We value your presence.</p>
+    <form action="https://formspree.io/f/mbjnzpen" method="POST">
+        <input type="text" name="name" class="form-control" placeholder="Name" required><br>
+        <input type="email" name="email" class="form-control" placeholder="Email" required><br>
+        <input type="text" name="phone" class="form-control" placeholder="Phone"><br>
+        <textarea name="message" class="form-control" placeholder="Your Message" rows="4" required></textarea><br>
+        <button type="submit" id="contact-btn">Send Message</button>
+    </form>
+</div>
+
+
 <div class="contact-info">
     <h1>Info</h1>
-    <p><i class="fa-solid fa-envelope"></i> arroyocharlize20@gmail.com</p>
-    <p><i class="fa-brands fa-facebook-f social-icon"></i> Brewha/325Kafey</p>
-    <p><i class="fa-brands fa-youtube social-icon"></i> charlizearroyojournal2432</p>
-    <p><i class="fa-brands fa-tiktok social-icon"></i> 325CAFE</p>
-    <p><i class="fa-solid fa-phone"></i> 0998 483 5547</p>
-    <p><i class="fa-solid fa-location-dot"></i> Poblacion Ilaya, Panay, Philippines</p>
-</div>
+    <div class="social-icons-container">
+        <a href="https://goo.gl/maps/yourlocation">
+            <i class="fas fa-map-marker-alt"></i> Poblacion Ilaya, Panay, Philippines
+        </a>
+        <a href="mailto:arroyocharlize20@gmail.com">
+            <i class="fas fa-envelope"></i> arroyocharlize20@gmail.com
+        </a>
+        <a href="https://www.youtube.com/charlizearroyojournal2432">
+            <i class="fab fa-youtube"></i> charlizearroyojournal2432
+        </a>
+        <a href="https://www.facebook.com/Brewha/325Kafey">
+            <i class="fab fa-facebook"></i> Brewha/325Kafey
+        </a>
+        <a href="tel:+639984835547">
+            <i class="fas fa-phone"></i> 0998 483 5547
+        </a>
+        <a href="https://www.tiktok.com/@325CAFE">
+            <i class="fab fa-tiktok"></i> 325CAFE
+        </a>
     </div>
+</div>
+
+           
 </section>
 
 <!-- Footer Section -->
@@ -525,6 +704,10 @@
     </div>
 </footer>
     <!-- contact end -->
+
+    <!-- Linking Swiper script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Linking custome script -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -572,6 +755,8 @@ function moveSlide(direction) {
 
 </script>
 
+
+
      <script>
         window.onscroll = function() {
             var header = document.querySelector('header');
@@ -606,7 +791,40 @@ function moveSlide(direction) {
                         }
                     });
                 </script>
-                
+        
+    <script>
+        // Initialize Swiper
+        const swiper = new Swiper('.slider-wrapper', {
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 25,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  // Responsive breakpoints
+  breakpoints: {
+    0: {
+        slidesPerView: 1
+    },
+    768: {
+        slidesPerView: 2
+    },
+    1024: {
+        slidesPerView: 3
+    },
+}
+});
+    </script>
 </body>
 
 </html>

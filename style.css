@@ -192,116 +192,93 @@ button.btn-outline-success:hover {
 
 
 /* about section start */
+/* About Section Adjustments */
 #about {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    padding: 20px;
-    background-color: #111; /* Very dark gray instead of pure black */
-    color: #f4f4f4; /* Softer off-white text */
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
+    flex-direction: column; /* Stack heading first, then content */
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center;
+    padding: 0; /* Remove padding */
+    background-color: #111;
+    color: #111;
+}
+
+#about .heading {
+    text-align: center;
+    font-size: 50px; /* Large and bold heading */
+    font-weight: bold;
+    margin: 10px 0 20px 0; /* Reduce top and bottom space */
+    color: #f4f4f4;
 }
 
 #about .container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row; /* Side by side layout for image and text */
+    justify-content: space-between;
     align-items: center;
-    background-color: #111; /* Match the section background */
-    border-radius: 10px;
-    width: 100%;
-    max-width: 1200px; /* Ensures the container doesn't get too wide */
-    height: auto;
-}
-
-.heading {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #f4f4f4; /* Softer white */
-    font-size: 50px;
-    font-weight: bold;
-}
-
-.heading span {
-    color: #f4f4f4; /* Softer white */
+    max-width: 100%; /* Full width container */
+    margin: 0 auto; /* Center the container */
+    padding: 15px;
 }
 
 #about .card {
+    flex: 1; /* Image takes equal space */
+    height: 500px; /* Full height adjustment */
+    overflow: hidden;
     border-radius: 10px;
-    overflow: hidden; /* Ensures rounded corners on the image */
-    height: 300px; /* Set the height for the image container */
-    width: 100%; /* Ensures the image container spans the full width */
 }
 
 #about .card img {
-    width: 100%; /* Ensures the image takes the full width of its container */
-    height: 100%; /* Ensures the image fills the height of the card */
-    object-fit: cover; /* Ensures the image covers the container area without distortion */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
 }
 
 #about .text-content {
-    padding: 20px;
-    color: #d1d1d1; /* Light gray for better readability */
-    font-size: 18px; /* Adjust text size for readability */
-    line-height: 1.6; /* Adjust line spacing for better readability */
-    max-width: 600px; /* Limit max width of the text content */
-    margin-top: 20px; /* Space between the image and the text content */
+    flex: 1; /* Text takes equal space */
+    padding: 40px;
+    color: #d1d1d1;
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify; /* Justify the text content */
+    
 }
 
-#about h3 {
-    color: #f4f4f4; /* Softer white for headings */
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-#about p {
-    color: #d1d1d1; /* Light gray for paragraphs */
-    font-size: 13px;
-}
-
-/* Mobile responsiveness */
+/* Responsive for Medium Screens */
 @media screen and (max-width: 992px) {
-    .heading {
-        font-size: 40px; /* Slightly smaller font on medium screens */
+    #about .container {
+        flex-direction: column; /* Stack vertically */
     }
 
-    #about p {
-        font-size: 16px; /* Adjust paragraph text size for better readability */
+    #about .card {
+        height: 300px; /* Limit image height */
     }
 
-    #about h3 {
-        font-size: 24px; /* Slightly smaller heading font on smaller screens */
-    }
-
-    .text-content {
-        padding: 15px; /* Slightly reduced padding on smaller screens */
+    #about .text-content {
+        padding: 20px;
     }
 }
 
-@media screen and (max-width: 766px) {
-    #about p {
-        font-size: 15px;
+/* Responsive for Small Screens */
+@media screen and (max-width: 768px) {
+    #about .heading {
+        font-size: 30px; /* Smaller heading size */
+        margin: 5px 0 15px 0; /* Adjust heading spacing */
     }
 
-    #about {
-        height: auto; /* Adjust height to prevent overflow on smaller screens */
+    #about .card {
+        height: 200px;
     }
 
-    .heading {
-        font-size: 30px; /* Smaller heading for mobile screens */
-    }
-
-    #about .card img {
-        height: 200px; /* Adjust image size on smaller screens */
-    }
-
-    .text-content {
-        padding: 10px; /* Reduced padding for mobile screens */
+    #about .text-content {
+        font-size: 16px;
+        padding: 15px;
+        text-align: justify; /* Ensure text remains justified */
     }
 }
-
 /* about section end */
 
 
@@ -403,157 +380,195 @@ button.btn-outline-success:hover {
 /* top cards end */
 
 
-/* product section start */
-/* Updated Product Slider Styles */
-.heading4 {
-    text-align: center;
-    font-size: 50px;
+
+
+
+
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Apply the Poppins font */
+    color: white; /* Make text white */
+    background-color: #111; /* Dark background */
+}
+
+/* Product Section */
+.product-section {
+    background-color: #111; /* Section background */
+    padding: 50px 0;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 14px;
     font-weight: bold;
-    color: #f4f4f4; /* White text for the heading */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* CSS rule to change the font color of h2 tags */
+#menu-section h2 {
+    color: white !important;
+    font-weight: bold !important; /* Force the bold style */
+}
+
+/* Center the Selection Menu */
+.nav-pills {
+    display: flex;
+    justify-content: center; /* Centers the menu horizontally */
+    align-items: center; /* Ensures vertical alignment */
+    gap: 15px; /* Adds spacing between the tabs */
     margin-bottom: 20px;
-}
-.product .heading4 span{
-    color: #bbb73c; /* Accent color for the span */
-}
-
-.slider {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding: 20px 0;
-    background-color: #111; /* Black background for the slider container */
+    padding: 10px 0;
+    border-bottom: 2px solid #444; /* Optional for visual separation */
 }
 
-.slider-container {
-    width: 100%;
-    display: flex;
-    overflow: hidden;
-}
-
-.slider-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.card {
-    flex: 0 0 20%; /* Show 5 cards at a time */
-    margin: 10px;
-    text-align: center;
-    background: #111; /* Black background for each card */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
-    position: relative;
-    border: 2px solid transparent; /* Default border is transparent */
-}
-
-.card.selected {
-    border-color: #f4f4f4; /* White border when selected */
-}
-
-.card .image-wrapper {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    width: 100%;
-    height: 200px; /* Fixed height for better control */
-}
-
-.card img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Ensures image is fully contained within the box */
-    transition: transform 0.3s ease-in-out;
-}
-
-.card .image-wrapper:hover img {
-    transform: scale(1.05); /* Slight zoom effect */
-}
-
-.card h3 {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 5px 0;
-    color: #f4f4f4; /* White text for the product name */
-}
-
-.card p {
-    font-size: 12px;
-    color: #000; /* Light gray text for the description */
-    margin: 3px 0;
-}
-
-.card .prices {
-    margin-top: 10px;
-    text-align: center;
-    font-size: 12px;
-}
-
-.card .prices p {
-    margin: 3px 0;
-    color: #000; /* Light gray text for prices */
-}
-
-.card .prices span {
-    font-weight: bold;
-    color: #000; /* Price color */
-}
-
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-button.prev,
-button.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #111;
+.nav-pills .nav-link {
     border: none;
-    color: #f4f4f4;
+    background-color: transparent;
+    color: #766f6f !important; /* Set the text color to the desired shade */
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link i {
+    margin-bottom: 5px;
+    display: block;
+    font-size: 24px;
+    color: #fff !important; /* Set the icon color to the desired shade */
+}
+
+.nav-pills .nav-link.active {
+    background-color: #766f6f !important; /* Active tab background color */
+    color: #fff !important; /* White text for active tab */
+    border-radius: 8px;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #5e5c5c !important; /* Slightly darker shade for hover effect */
+    color: #fff !important; /* White text on hover */
+}
+
+
+/* Product Cards */
+.product-card {
+    background-color: #766f6f;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    position: relative; /* Allows for absolute positioning of price */
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #555;
+}
+
+.product-info {
+    padding-left: 15px;
+    max-width: 70%; /* Limit the width of product info */
+}
+
+.product-info h5 {
     font-size: 18px;
-    cursor: pointer;
-    padding: 10px 15px;
-    border-radius: 50%;
-    z-index: 2;
+    font-weight: bold;
+    margin: 0 0 10px;
+    color: #000; /* Product name color set to black */
 }
 
-button.prev {
-    left: 10px;
+.product-info small {
+    font-style: italic;
+    color: #000; /* Description text color set to black */
 }
 
-button.next {
-    right: 10px;
+/* Price Container */
+.product-price {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    text-align: right;
 }
 
-button.prev:hover,
-button.next:hover {
-    background-color: #111;
+.product-price p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #fff; /* Price text color set to black */
 }
 
-/* Hover Effect for the Cards */
-.card:hover {
-    background-color: #111; /* Darker background on hover */
-    cursor: pointer;
+.product-price p span {
+    font-weight: bold;
 }
 
-/* Active state when the card is clicked (selected) */
-.card.selected {
-    background-color: #f4f4f4; /* White background when selected */
-    color: #000; /* Black text color when selected */
-    border: 2px solid #f4f4f4; /* White border when selected */
+/* Tab Content */
+.tab-content {
+    padding-top: 20px;
 }
 
-.card.selected h3,
-.card.selected p,
-.card.selected .prices {
-    color: #000; /* Ensure text is black when selected */
+/* Make all text inside the tab content black */
+.tab-pane {
+    color: #000; /* Set all text inside the tab content to black */
 }
 
-/* product section end */
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .product-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-info {
+        padding-left: 0;
+        margin-top: 10px;
+    }
+
+    .product-price {
+        position: static; /* Make price stack below in smaller screen */
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-pills .nav-link {
+        padding: 10px 10px;
+        font-size: 12px;
+    }
+
+    .nav-pills .nav-link i {
+        font-size: 20px;
+    }
+
+    .product-image {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+
 
 
 /* Bread section start */
@@ -590,7 +605,7 @@ button.next:hover {
 /* Bread Item Styling */
 #bread .bread-item {
     text-align: center;
-    background-color: #bbb73c; /* Yellow background for the bread items */
+    background-color: #766f6f; /* Yellow background for the bread items */
     border-radius: 12px; /* Slightly smaller border-radius for a more compact look */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Softer shadow */
     padding: 10px; /* Reduced padding for a more compact box */
@@ -688,7 +703,7 @@ body {
 #gallery {
     width: 100%;
     background-color: #111; /* Black background for gallery section */
-    padding: 30px 0; /* Add padding for spacing */
+    padding: 25px 0; /* Add padding for spacing */
 }
 
 .heading5 {
@@ -763,269 +778,392 @@ body {
 /* Our Gallery End */
 
 
-
-
-
-
-/* Our review start */
-/* Review Section */
-.review {
-    padding: 50px 20px; /* Adds space above and below the section */
-    background-color: #111; /* Black background for the entire section */
-    color: #f4f4f4; /* White text color */
+/* Testimonial Section Styling */
+.review-section {
+    padding: 50px 0 30px; /* Reduced bottom padding */
+    background: var(--light-pink-color);
+    color: white; /* Default text color */
 }
 
-/* Heading Styling */
-.review h1.heading {
+/* Common Title Styles */
+.section-title-wrapper {
+    text-align: center; /* Centers the title */
+    margin-top: 30px;   /* Adds spacing above the title */
+}
+
+.section-title {
+    font-size: 50px;       /* Matches the "Our Gallery" title size */
+    font-weight: bold;     /* Same boldness as "Our Gallery" */
+    font-family: Arial, sans-serif; /* Consistent font family */
+    color: #f4f4f4;        /* Matches the "Our Gallery" title color */
+}
+
+/* Optional Highlight for Specific Words in Title */
+.section-title span {
+    color: #f4f4f4; /* Same white color as the rest of the title */
+}
+
+/* Slider Wrapper */
+.review-section .slider-wrapper {
+    overflow: hidden;
+    margin: 0 60px 50px;
+}
+
+/* Review List Styling */
+.review-section .review {
+    display: flex;
+    padding: 35px;
     text-align: center;
-    font-size: 2.5rem; /* Larger font for the heading */
-    color: #f4f4f4; /* White text */
-    margin-bottom: 40px; /* Adds space below the heading */
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.review h1.heading span {
-    color: #f4f4f4; /* Yellow accent for the highlighted word */
-    font-weight: bold;
-}
-
-/* Box Container */
-.review .box-container {
-    display: flex;
-    flex-wrap: wrap; /* Allows wrapping for smaller screens */
-    gap: 20px; /* Space between the boxes */
-    justify-content: center;
-    max-width: 1200px; /* Prevents the boxes from spreading too wide */
-    margin: 0 auto; /* Centers the container */
-}
-
-/* Review Boxes */
-.review .box-container .box {
-    flex: 1 1 30%; /* Each box takes 30% of the width */
-    min-width: 280px; /* Minimum width for smaller screens */
-    background-color: #f4f4f4; /* White background for the boxes */
-    color: #333; /* Dark text for the box content */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow for emphasis */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px;
-    text-align: center; /* Centers the content inside the boxes */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover Effect */
-.review .box-container .box:hover {
-    transform: translateY(-10px); /* Moves the box up slightly on hover */
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4); /* Darker shadow on hover */
-}
-
-/* Review Text */
-.review .box-container .box p {
-    font-size: 1rem; /* Adjusts font size for readability */
-    line-height: 1.6; /* Better line spacing */
-    margin-bottom: 15px; /* Adds spacing below the review text */
-}
-
-/* User Information */
-.review .box-container .box .user {
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-top: 15px;
 }
 
-.review .box-container .box .user img {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%; /* Circular user image */
-    object-fit: cover; /* Ensures the image covers the circle */
-    margin-right: 10px; /* Space between the image and text */
+/* User Image Hover Effect */
+.review-section .review .user-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 50px;
+    border-radius: var(--border-radius-circle);
+    transition: transform 0.3s ease, scale 0.3s ease; /* Smooth transition for grow effect */
 }
 
-.review .box-container .box .user h3 {
-    font-size: 1.1rem; /* Slightly larger name font */
-    color: #333;
+.review-section .review .user-image:hover {
+    transform: scale(1.1); /* Slightly enlarge the image on hover */
+}
+
+/* Reviewer's Name Styling */
+.review-section .review .name {
+    margin-bottom: 16px;
+    font-size: 22px; /* Increased font size for the name */
+    color: white; /* Reviewer name color */
+}
+
+/* Review Content (Feedback) Styling */
+.review-section .review .feedback {
+    line-height: 25px;
+    color: white; /* Feedback text color */
+    font-size: 18px; /* Increase the font size of the feedback content */
+}
+
+/* Swiper Pagination */
+.review-section .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+    background: var(--secondary-color);
+}
+
+.review-section .swiper-slide-button {
+    margin-top: -50px;
+    color: var(--secondary-color);
+    transition: 0.3s ease;
+}
+
+.review-section .swiper-slide-button:hover {
+    color: var(--primary-color);
+}
+
+/* Swiper Button (Previous and Next) Styling */
+.review-section .swiper-button-prev,
+.review-section .swiper-button-next {
+    color: white; /* Change arrow color to white */
+    font-size: 20px; /* Adjust the size to make the arrows smaller */
+}
+
+/* Optional: Hover Effect for Arrows */
+.review-section .swiper-button-prev:hover,
+.review-section .swiper-button-next:hover {
+    color: #f4f4f4; /* Lighter shade of white or a different color on hover */
+}
+
+
+
+/* General Styles */
+body {
     margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background */
 }
 
-.review .box-container .box .user span {
-    font-size: 0.9rem;
-    color: #777; /* Light gray color for the role */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .review .box-container {
-        flex-direction: column; /* Stacks boxes vertically */
-        gap: 20px;
-    }
-
-    .review .box-container .box {
-        flex: 1 1 100%; /* Makes boxes full-width */
-    }
-}
-
-/* Our review end */
-
-
-
-/* contact start */
-/* Main Section for Contact and Footer */
+/* Contact Section */
 #contact-footer {
-    width: 100%;
-    padding-top: 70px;
-    padding-bottom: 50px;
-    background-color: #111;
+    background-color: #111; /* Dark gray background */
+    padding: 40px 0;
 }
 
-#contact-footer .container {
+#contact-us {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch; /* Ensures all children have the same height */
+    flex-wrap: wrap; /* Allows wrapping for responsiveness */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Contact Form Box */
-.contact-form {
-    width: 40%;  /* Reduced width to 40% */
-    background-color: #f4f4f4;
+.map-container,
+.contact-form,
+.contact-info {
+    flex: 1; /* Equal width for all sections */
+    background-color: #fff; /* Slightly lighter gray for sections */
+    border-radius: 10px;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for sections */
+    min-height: 400px; /* Ensures all sections have equal height */
+    display: flex;
+    flex-direction: column; /* Aligns content inside each section */
+    justify-content: space-between; /* Evenly distributes content vertically */
 }
 
-.contact-form .heading6 {
-    font-size: 50px;
-    font-weight: bold;
-    margin-top: 10px;
-    color: #000;
-}
-
-.contact-form .heading6 span {
-    color: #f4f4f4;
-}
-
-.contact-form p {
-    font-size: 14px;
-    color: #000;
-    margin-top: 10px;
-}
-
-.contact-form input {
+/* Map Section */
+.map-container iframe {
     width: 100%;
-    border: none;
-    border-bottom: 1px solid #908c8a;
-    padding: 10px;
+    height: 100%;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* Contact Form Section */
+.contact-form .heading6 {
+    font-size: 32px;
+    color: #000; /* White text */
+    text-align: center;
     margin-bottom: 10px;
 }
 
-.contact-form #contact-btn {
-    width: 100%;
-    background: transparent;
-    border: 2px solid #908c8a;
+.contact-form .heading6 span {
+    color: #000; /* Highlighted orange color */
+}
+
+.contact-form p {
     color: #000;
-    font-weight: bold;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.contact-form #contact-btn:hover {
-    background-color: #000;
-    color: #f4f4f4;
-}
-
-/* Contact Info Box */
-.contact-info {
-    width: 30%;  /* Reduced width to 30% */
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-}
-
-.contact-info h1 {
-    font-size: 20px;
-    color: #000;
-}
-
-.contact-info p {
-    font-size: 14px;
-    color: #000;
-    margin-top: 15px;
-}
-
-.contact-info .social-icon {
-    margin-right: 10px;
-    font-size: 20px;
-    transition: color 0.3s, transform 0.3s;
-}
-
-.contact-info .social-icon:hover {
-    color: #f4f4f4;
-    transform: scale(1.1);
-}
-
-/* Footer Styles */
-footer {
-    background-color: #000;
-    padding: 20px 0;
-}
-
-footer .mb-3 {
+    text-align: center;
     margin-bottom: 20px;
 }
 
-footer i {
-    font-size: 30px;
-    color: #f4f4f4;
-    transition: color 0.3s, transform 0.3s;
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
 }
 
-footer i:hover {
-    color: #494948;
-    transform: scale(1.1);
+.contact-form form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #888381; /* Orange button */
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form form button:hover {
+    background-color: #888381; /* Slightly darker orange on hover */
+}
+/* Contact Info Section */
+.contact-info {
+    display: flex;
+    flex-direction: column; /* Stack heading and content vertically */
+    justify-content: flex-start; /* Align content at the top */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text alignment */
+    color: #000; /* Black text */
+    padding: 20px; /* Add padding for spacing */
+    max-width: 600px; /* Limit width for readability */
+    margin: auto; /* Center horizontally */
+    height: 100%; /* Ensure the section stretches */
+}
+
+/* Heading Styles */
+.contact-info h1 {
+    font-size: 32px; /* Adjust font size */
+    color: #000; /* Black text */
+    margin-bottom: 20px; /* Add space below the heading */
+    width: 100%; /* Full width for alignment */
+    text-align: center; /* Center-align the heading */
+}
+
+/* Social Icons Container */
+.contact-info .social-icons-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 15px; /* Add spacing between items */
+    width: 100%; /* Take full width */
+}
+
+/* Social Icons Links */
+.contact-info .social-icons-container a {
+    display: flex; /* Align icon and text side by side */
+    align-items: center; /* Vertically align items */
+    justify-content: center; /* Center align links horizontally */
+    color: #000; /* Black color for links */
+    text-decoration: none; /* Remove underline */
+    margin-bottom: 10px; /* Add space between links */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover Effect */
+.contact-info .social-icons-container a:hover {
+    color: #888381; /* Change color on hover */
+}
+
+/* Icon Styles */
+.contact-info .social-icons-container i {
+    margin-right: 10px; /* Add space between icon and text */
+    font-size: 20px; /* Adjust icon size */
+}
+
+/* Responsive Design for Contact Info */
+@media screen and (max-width: 768px) {
+    .contact-info {
+        max-width: 90%; /* Adjust width for smaller screens */
+        padding: 10px;
+    }
+
+    .contact-info h1 {
+        font-size: 28px; /* Reduce heading size */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contact-info h1 {
+        font-size: 24px; /* Further reduce heading size */
+    }
+
+    .contact-info .social-icons-container i {
+        font-size: 18px; /* Adjust icon size */
+    }
+}
+
+/* Contact Form Styling */
+.contact-form {
+    width: 100%; /* Ensure the form takes the full width of its container */
+    max-width: 600px; /* Limit the width for readability */
+    margin: auto; /* Center the form horizontally */
+    padding: 20px; /* Add padding around the form */
+    background-color: #f9f9f9; /* Light background for the form */
+    border-radius: 10px; /* Rounded corners for a soft look */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a light shadow for depth */
+}
+
+/* Heading for Contact Form */
+.contact-form .heading6 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px; /* Space below heading */
+    text-align: center;
+}
+
+.contact-form .heading6 span {
+    color: #766f6f; /* Color for the "US" part */
+}
+
+/* Form Description Text */
+.contact-form p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Input Fields and Textarea */
+.contact-form .form-control {
+    width: 100%; /* Full width of container */
+    padding: 15px; /* Add padding inside each field */
+    margin-bottom: 15px; /* Space between fields */
+    border: 2px solid #000; /* Black border around the fields */
+    background-color: #f5f5f5; /* Light gray background for visibility */
+    font-size: 16px; /* Larger font for readability */
+    color: #333; /* Dark text inside fields */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+/* Message Box (textarea) */
+.contact-form .form-control[name="message"] {
+    resize: vertical; /* Allow vertical resizing */
+    height: 150px; /* Default height */
+}
+
+/* Submit Button */
+#contact-btn {
+    width: 100%; /* Full width button */
+    padding: 15px;
+    font-size: 18px;
+    background-color: #766f6f; /* Button background color */
+    color: #fff; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Button Hover Effect */
+#contact-btn:hover {
+    background-color: #888381; /* Change to a darker shade on hover */
+}
+
+/* Responsive Design for Contact Form */
+@media screen and (max-width: 768px) {
+    .contact-form {
+        max-width: 90%; /* Adjust the form width for smaller screens */
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .contact-form .heading6 {
+        font-size: 28px; /* Smaller heading size */
+    }
+
+    .contact-form .form-control {
+        font-size: 14px; /* Smaller font size for input fields */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contact-form .heading6 {
+        font-size: 24px; /* Further reduce heading size */
+    }
+
+    .contact-form .form-control i {
+        font-size: 18px; /* Adjust icon size */
+    }
+}
+
+/* Footer Section */
+footer {
+    background-color: #000; /* Black background for footer */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .social-icons-container a {
+    color: #fff;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer .social-icons-container a:hover {
+    color: #888381; /* Orange on hover */
 }
 
 /* Responsive Design */
-@media screen and (max-width: 1024px) {
-    .contact-form, .contact-info {
-        width: 90%;  /* Adjust width for slightly smaller screens */
-    }
-
-    .contact-info {
-        margin-top: 30px;
-    }
-}
-
 @media screen and (max-width: 768px) {
-    #contact-footer .container {
-        flex-direction: column;
-        align-items: center;
+    #contact-us {
+        flex-direction: column; /* Stack sections vertically */
+        gap: 20px; /* Add spacing between stacked sections */
     }
 
+    .map-container,
     .contact-form,
     .contact-info {
-        width: 80%;
-        margin-bottom: 30px;
-    }
-
-    .contact-info .social-icon {
-        font-size: 18px;
-    }
-
-    .contact-form input, .contact-form #contact-btn {
-        width: 100%;
+        min-height: auto; /* Remove height restrictions for smaller screens */
     }
 }
-
-@media screen and (max-width: 400px) {
-    .contact-form input {
-        width: 90%;
-    }
-}
-
-/* contact end */
