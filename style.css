@@ -425,7 +425,7 @@ h1 {
     gap: 15px; /* Adds spacing between the tabs */
     margin-bottom: 20px;
     padding: 10px 0;
-    border-bottom: 2px solid #444; /* Optional for visual separation */
+    border-bottom: 2px solid #000; /* Optional for visual separation */
 }
 
 .nav-pills .nav-link {
@@ -455,13 +455,13 @@ h1 {
 
 .nav-pills .nav-link:hover {
     background-color: #5e5c5c !important; /* Slightly darker shade for hover effect */
-    color: #fff !important; /* White text on hover */
+    color: #000 !important; /* White text on hover */
 }
 
 
 /* Product Cards */
 .product-card {
-    background-color: #766f6f;
+    background-color: #fff;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -480,7 +480,7 @@ h1 {
     height: 100px;
     object-fit: cover;
     border-radius: 10px;
-    border: 2px solid #555;
+    border: 2px solid #000;
 }
 
 .product-info {
@@ -511,7 +511,7 @@ h1 {
 .product-price p {
     font-size: 14px;
     margin: 5px 0;
-    color: #fff; /* Price text color set to black */
+    color: #000; /* Price text color set to black */
 }
 
 .product-price p span {
