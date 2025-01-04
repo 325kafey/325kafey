@@ -192,18 +192,22 @@ button.btn-outline-success:hover {
 
 
 /* about section start */
-/* About Section Adjustments */
+/* About Section Background */
 #about {
     width: 100%;
     min-height: 100vh;
     display: flex;
-    flex-direction: column; /* Stack heading first, then content */
-    justify-content: flex-start; /* Align content to the top */
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    padding: 0; /* Remove padding */
-    background-color: #111;
-    color: #111;
+    padding: 0;
+    background-image: url('images/wallpaper.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the background image covers the entire section */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: #f4f4f4; /* Text color for better readability on dark backgrounds */
 }
+
 
 #about .heading {
     text-align: center;
@@ -285,112 +289,177 @@ button.btn-outline-success:hover {
 
 
 
-
-/* top cards start */
+/* Best Seller Section Styles */
 #top-cards {
-    width: 100%;
     padding: 60px 20px;
-    background: #111;
+    background-image: url('images/wallpaper.jpg'); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
 }
 
+/* Heading for the Best Seller Section */
 .heading2 {
-    color: #f4f4f4;
-    text-align: center;
     font-size: 50px;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin: 30px 0;
+    color: #f4f4f4;
 }
 
 .heading2 span {
     color: #f4f4f4; /* Accent color for the span */
 }
 
-#top-cards .container {
-    margin-top: 30px;
-}
-
-#top-cards .row {
+/* Flexbox layout for products */
+.container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /* Even space between cards */
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }
 
-#top-cards .card {
+/* Flip Item Styles */
+.item {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+}
+
+.item-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
+}
+
+.item-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+.item-front, .item-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
     border-radius: 15px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Added transition for background color */
-    cursor: pointer;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center; /* Center the image inside the card */
-    align-items: center;
-    position: relative;
-    background-color: #f4f4f4; /* Default background for the card */
 }
 
-#top-cards .card img {
+/* Front Side */
+.item-front {
+    background: #000;
+}
+
+.item-front img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-#top-cards .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
-    background-color: #000; /* Black background on hover */
+/* Hover Effect on Front Image */
+.item-front:hover img {
+    transform: scale(1.1); /* Slight zoom-in effect */
+    opacity: 0.8; /* Slight transparency effect */
 }
 
-#top-cards .card:hover img {
-    opacity: 0.7; /* Reduce image opacity to create the hover effect */
+/* Back Side */
+.item-back {
+    background: #fff;
+    color: #000;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
 }
 
-/* Mobile responsiveness */
+.item-back h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.item-back p {
+    font-size: 16px;
+    color: #000;
+}
+
+/* Price Styling on the Back */
+.item-back .price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Navbar Link Styling */
+.navbar-nav .nav-item .menu-btn {
+    text-decoration: none; /* Remove underline */
+    color: white; /* White color for text */
+}
+
+/* Optional: You can add a custom hover effect if you want */
+.navbar-nav .nav-item .menu-btn:hover {
+    text-decoration: none; /* Ensure no underline on hover */
+    color: #f4f4f4; /* Lighter color when hovered */
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #333;
+}
+
+/* Navbar Hover Effects */
+.navbar-nav .nav-item .menu-btn:hover {
+    color: #f4f4f4; /* Change color on hover */
+}
+
+/* Hide menu item names when clicking on Best Seller */
+#top-cards:active .navbar-nav .nav-item .menu-btn {
+    display: none; /* This hides the menu items when the Best Seller section is clicked */
+}
+
+/* Responsive Design */
 @media screen and (max-width: 768px) {
-    #top-cards .row {
+    .container {
         flex-direction: column;
         align-items: center;
     }
 
-    .heading2 {
-        font-size: 40px; /* Slightly smaller heading */
+    .item {
+        width: 90%;
+        margin-bottom: 20px;
     }
 
-    #top-cards .card {
-        width: 90%; /* Make the cards full width on smaller screens */
-        margin-bottom: 20px;
+    .heading2 {
+        font-size: 40px;
     }
 }
 
 @media screen and (max-width: 576px) {
+    .item {
+        width: 100%;
+    }
+
     .heading2 {
-        font-size: 30px; /* Smaller font size on very small screens */
-    }
-
-    #top-cards .card {
-        width: 100%; /* Full-width cards on extra small screens */
-        margin-bottom: 15px; /* Reduced space between cards */
-    }
-
-    #top-cards .card img {
-        height: 250px; /* Limit image height on smaller screens */
+        font-size: 30px;
     }
 }
-
-/* top cards end */
-
-
-
 
 
 
 /* General Styling */
-body {
-    font-family: 'Poppins', sans-serif; /* Apply the Poppins font */
-    color: white; /* Make text white */
-    background-color: #111; /* Dark background */
-}
-
 /* Product Section */
 .product-section {
     background-color: #111; /* Section background */
@@ -405,33 +474,27 @@ body {
     text-transform: uppercase;
 }
 
-
-h1 {
-    font-size: 36px;
-    font-weight: bold;
-}
-
 /* CSS rule to change the font color of h2 tags */
 #menu-section h2 {
     color: white !important;
-    font-weight: bold !important; /* Force the bold style */
+    font-weight: bold !important;
 }
 
 /* Center the Selection Menu */
 .nav-pills {
     display: flex;
-    justify-content: center; /* Centers the menu horizontally */
-    align-items: center; /* Ensures vertical alignment */
-    gap: 15px; /* Adds spacing between the tabs */
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
     margin-bottom: 20px;
     padding: 10px 0;
-    border-bottom: 2px solid #000; /* Optional for visual separation */
+    border-bottom: 2px solid #000;
 }
 
 .nav-pills .nav-link {
     border: none;
     background-color: transparent;
-    color: #766f6f !important; /* Set the text color to the desired shade */
+    color: #766f6f !important;
     font-size: 14px;
     font-weight: bold;
     text-align: center;
@@ -444,20 +507,19 @@ h1 {
     margin-bottom: 5px;
     display: block;
     font-size: 24px;
-    color: #fff !important; /* Set the icon color to the desired shade */
+    color: #fff !important;
 }
 
 .nav-pills .nav-link.active {
-    background-color: #766f6f !important; /* Active tab background color */
-    color: #fff !important; /* White text for active tab */
+    background-color: #766f6f !important;
+    color: #fff !important;
     border-radius: 8px;
 }
 
 .nav-pills .nav-link:hover {
-    background-color: #5e5c5c !important; /* Slightly darker shade for hover effect */
-    color: #000 !important; /* White text on hover */
+    background-color: #5e5c5c !important;
+    color: #000 !important;
 }
-
 
 /* Product Cards */
 .product-card {
@@ -466,7 +528,7 @@ h1 {
     display: flex;
     align-items: center;
     padding: 15px;
-    position: relative; /* Allows for absolute positioning of price */
+    position: relative;
     transition: all 0.3s ease;
 }
 
@@ -485,19 +547,19 @@ h1 {
 
 .product-info {
     padding-left: 15px;
-    max-width: 70%; /* Limit the width of product info */
+    max-width: 70%;
 }
 
 .product-info h5 {
     font-size: 18px;
     font-weight: bold;
     margin: 0 0 10px;
-    color: #000; /* Product name color set to black */
+    color: #000;
 }
 
 .product-info small {
     font-style: italic;
-    color: #000; /* Description text color set to black */
+    color: #000;
 }
 
 /* Price Container */
@@ -511,7 +573,7 @@ h1 {
 .product-price p {
     font-size: 14px;
     margin: 5px 0;
-    color: #000; /* Price text color set to black */
+    color: #000;
 }
 
 .product-price p span {
@@ -523,9 +585,8 @@ h1 {
     padding-top: 20px;
 }
 
-/* Make all text inside the tab content black */
 .tab-pane {
-    color: #000; /* Set all text inside the tab content to black */
+    color: #000;
 }
 
 /* Responsive Design */
@@ -545,7 +606,7 @@ h1 {
     }
 
     .product-price {
-        position: static; /* Make price stack below in smaller screen */
+        position: static;
         text-align: center;
         margin-top: 10px;
     }
@@ -571,17 +632,25 @@ h1 {
 
 
 
+
 /* Bread section start */
 /* Bread Section Styles */
 #bread {
     width: 100%;
     padding: 60px 20px;
     background-color: #111; /* Black background for the bread section */
+    background-image: url('images/wallpaper.jpg'); /* Path to your image */
+    background-size: cover; /* Ensure the image covers the section */
+    background-position: center; /* Center the image */
     color: #f4f4f4; /* White text */
+    position: relative; /* Allows the background image to be positioned */
+    z-index: 1; /* Ensures background is behind content */
 }
 
 #bread .container {
     text-align: center;
+    position: relative; /* Ensures text is above the background */
+    z-index: 2; /* Makes sure the container text stays on top of the background */
 }
 
 #bread .heading {
@@ -605,7 +674,7 @@ h1 {
 /* Bread Item Styling */
 #bread .bread-item {
     text-align: center;
-    background-color: #766f6f; /* Yellow background for the bread items */
+    background-color: #fff; /* Yellow background for the bread items */
     border-radius: 12px; /* Slightly smaller border-radius for a more compact look */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Softer shadow */
     padding: 10px; /* Reduced padding for a more compact box */
@@ -689,21 +758,15 @@ h1 {
 /* Bread section end */
 
 
-
-/* Our Gallery Start */
-/* Global Styles */
-body {
-    background-color: black !important; /* Black background for the entire page */
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
 /* Gallery Section Styles */
 #gallery {
     width: 100%;
     background-color: #111; /* Black background for gallery section */
+    background-image: url('images/wallpaper.jpg'); /* Path to your background image */
+    background-size: cover; /* Ensure the background image covers the section */
+    background-position: center; /* Center the background image */
     padding: 25px 0; /* Add padding for spacing */
+    color: #f4f4f4; /* Set color for text */
 }
 
 .heading5 {
@@ -781,7 +844,10 @@ body {
 /* Testimonial Section Styling */
 .review-section {
     padding: 50px 0 30px; /* Reduced bottom padding */
-    background: var(--light-pink-color);
+    background: var(--light-pink-color); /* Optional solid background color */
+    background-image: url('images/wallpaper.jpg'); /* Path to your background image */
+    background-size: cover; /* Ensure the background image covers the section */
+    background-position: center; /* Center the image */
     color: white; /* Default text color */
 }
 
