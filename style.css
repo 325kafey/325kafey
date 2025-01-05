@@ -285,7 +285,7 @@ button.btn-outline-success:hover {
 
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     background-color: #000; /* Dark background for contrast */
     color: #fff;
     overflow-x: hidden; /* Prevent horizontal scroll */
@@ -758,7 +758,7 @@ body {
     background-color: black !important; /* Black background for the entire page */
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /* Gallery Section Styles */
@@ -856,7 +856,7 @@ body {
 .section-title {
     font-size: 50px;       /* Matches the "Our Gallery" title size */
     font-weight: bold;     /* Same boldness as "Our Gallery" */
-    font-family: Arial, sans-serif; /* Consistent font family */
+    font-family: 'Times New Roman', Times, serif; /* Change to Times New Roman */
     color: #f4f4f4;        /* Matches the "Our Gallery" title color */
 }
 
@@ -864,6 +864,7 @@ body {
 .section-title span {
     color: #f4f4f4; /* Same white color as the rest of the title */
 }
+
 
 /* Slider Wrapper */
 .review-section .slider-wrapper {
@@ -944,7 +945,7 @@ body {
 /* General Styles */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     background-color: #000; /* Black background */
 }
 
