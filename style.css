@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 body {
@@ -437,7 +437,7 @@ h1, h2, h3 {
 
 /* General Styling */
 body {
-    font-family: 'Poppins', sans-serif; /* Apply the Poppins font */
+    font-family: 'Times New Roman', Times, serif; /* Apply the Poppins font */
     color: white; /* Make text white */
     background-color: #111; /* Dark background */
 }
@@ -1078,39 +1078,48 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify; /* Justify the text */
+    height: auto;
+    width: 100%;
 }
 
+/* Contact Info Heading */
 .contact-info h1 {
-    font-size: 28px; /* Adjust font size */
-    color: #333; /* Darker text for headings */
-    margin-bottom: 15px; /* Space below heading */
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center; /* Title remains centered */
 }
 
 /* Social Icons Container */
 .social-icons-container {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Spacing between items */
-    width: 100%; /* Full width */
+    gap: 15px; /* Space between items */
+    width: 100%;
+    align-items: center; /* Align icons and text in center */
 }
 
 .social-icons-container a {
-    display: flex; /* Align icon and text side by side */
-    align-items: center; /* Vertically align items */
-    justify-content: center; /* Center align links horizontally */
-    color: #000; /* Dark color for links */
-    text-decoration: none; /* Remove underline */
-    gap: 10px; /* Space between icon and text */
-    transition: color 0.3s ease; /* Smooth hover effect */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px; /* Space between icon and text */
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .social-icons-container a:hover {
-    color: #888381; /* Change to grayish color on hover */
+    color: #888381; /* Hover color */
 }
 
 .social-icons-container i {
-    font-size: 20px; /* Adjust icon size */
+    font-size: 20px;
 }
 
 /* Responsive Design */
