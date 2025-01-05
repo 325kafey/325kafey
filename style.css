@@ -192,22 +192,18 @@ button.btn-outline-success:hover {
 
 
 /* about section start */
-/* About Section Background */
+/* About Section Adjustments */
 #about {
     width: 100%;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction: column; /* Stack heading first, then content */
+    justify-content: flex-start; /* Align content to the top */
     align-items: center;
-    padding: 0;
-    background-image: url('images/wallpaper.jpg'); /* Replace with your image path */
-    background-size: cover; /* Ensures the background image covers the entire section */
-    background-position: center; /* Centers the background image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    color: #f4f4f4; /* Text color for better readability on dark backgrounds */
+    padding: 0; /* Remove padding */
+    background-color: #111;
+    color: #111;
 }
-
 
 #about .heading {
     text-align: center;
@@ -288,20 +284,21 @@ button.btn-outline-success:hover {
 
 
 
-
-/* Best Seller Section Styles */
-#top-cards {
-    padding: 60px 20px;
-    background-image: url('images/wallpaper.jpg'); /* Replace with your background image path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Dark background for contrast */
     color: #fff;
-    text-align: center;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-/* Heading for the Best Seller Section */
+h1, h2, h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Best Seller Section */
 .heading2 {
+    text-align: center;
     font-size: 50px;
     font-weight: bold;
     margin: 30px 0;
@@ -309,23 +306,24 @@ button.btn-outline-success:hover {
 }
 
 .heading2 span {
-    color: #f4f4f4; /* Accent color for the span */
+    color: #f4f4f4; /* Accent color for "SELLER" */
 }
 
-/* Flexbox layout for products */
+/* Container Styles */
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     padding: 20px;
+    overflow: hidden; /* Prevent overflow issues */
 }
 
 /* Flip Item Styles */
 .item {
     width: 300px;
     height: 400px;
-    perspective: 1000px;
+    perspective: 1000px; /* Enable 3D flip effect */
 }
 
 .item-inner {
@@ -337,7 +335,7 @@ button.btn-outline-success:hover {
 }
 
 .item-inner.flipped {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); /* Flip the card */
 }
 
 .item-front, .item-back {
@@ -352,82 +350,54 @@ button.btn-outline-success:hover {
 
 /* Front Side */
 .item-front {
-    background: #000;
+    background-color: #000; /* Dark background */
 }
 
 .item-front img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Prevent image distortion */
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Hover Effect on Front Image */
+/* Hover Effect on Front */
 .item-front:hover img {
-    transform: scale(1.1); /* Slight zoom-in effect */
-    opacity: 0.8; /* Slight transparency effect */
+    transform: scale(1.1); /* Zoom-in effect */
+    opacity: 0.8; /* Slight transparency */
 }
 
 /* Back Side */
 .item-back {
-    background: #fff;
+    background-color: #fff;
     color: #000;
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); /* Position for flip */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
     padding: 20px;
     text-align: center;
+    height: 100%; /* Ensure it takes full height */
 }
 
+/* Adjust heading and paragraph spacing */
 .item-back h3 {
     font-size: 24px;
     margin-bottom: 10px;
+    margin-top: 0; /* Remove default margin */
 }
 
 .item-back p {
     font-size: 16px;
-    color: #000;
+    margin-bottom: 15px;
+    color: #333; /* Slightly darker text */
+    margin-top: 0; /* Remove top margin */
+    padding-bottom: 10px; /* Some padding to raise the text */
 }
 
-/* Price Styling on the Back */
+/* Ensure no price styling remains */
 .item-back .price {
-    font-size: 24px;
-    font-weight: bold;
-    color: #000;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 5px;
-    display: inline-block;
-}
-
-/* Navbar Link Styling */
-.navbar-nav .nav-item .menu-btn {
-    text-decoration: none; /* Remove underline */
-    color: white; /* White color for text */
-}
-
-/* Optional: You can add a custom hover effect if you want */
-.navbar-nav .nav-item .menu-btn:hover {
-    text-decoration: none; /* Ensure no underline on hover */
-    color: #f4f4f4; /* Lighter color when hovered */
-}
-
-/* Navbar Styling */
-.navbar {
-    background-color: #333;
-}
-
-/* Navbar Hover Effects */
-.navbar-nav .nav-item .menu-btn:hover {
-    color: #f4f4f4; /* Change color on hover */
-}
-
-/* Hide menu item names when clicking on Best Seller */
-#top-cards:active .navbar-nav .nav-item .menu-btn {
-    display: none; /* This hides the menu items when the Best Seller section is clicked */
+    display: none; /* Ensure price is not displayed */
 }
 
 /* Responsive Design */
@@ -438,7 +408,7 @@ button.btn-outline-success:hover {
     }
 
     .item {
-        width: 90%;
+        width: 100%; /* Take most of the screen */
         margin-bottom: 20px;
     }
 
@@ -452,6 +422,10 @@ button.btn-outline-success:hover {
         width: 100%;
     }
 
+    .item-front img {
+        height: auto; /* Maintain aspect ratio */
+    }
+
     .heading2 {
         font-size: 30px;
     }
@@ -459,11 +433,19 @@ button.btn-outline-success:hover {
 
 
 
+
+
 /* General Styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Apply the Poppins font */
+    color: white; /* Make text white */
+    background-color: #111; /* Dark background */
+}
+
 /* Product Section */
 .product-section {
     background-color: #111; /* Section background */
-    padding: 50px 0;
+    padding: 80px 0;
 }
 
 /* Section Title */
@@ -474,27 +456,33 @@ button.btn-outline-success:hover {
     text-transform: uppercase;
 }
 
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
 /* CSS rule to change the font color of h2 tags */
 #menu-section h2 {
     color: white !important;
-    font-weight: bold !important;
+    font-weight: bold !important; /* Force the bold style */
 }
 
 /* Center the Selection Menu */
 .nav-pills {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
+    justify-content: center; /* Centers the menu horizontally */
+    align-items: center; /* Ensures vertical alignment */
+    gap: 15px; /* Adds spacing between the tabs */
     margin-bottom: 20px;
     padding: 10px 0;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #000; /* Optional for visual separation */
 }
 
 .nav-pills .nav-link {
     border: none;
     background-color: transparent;
-    color: #766f6f !important;
+    color: #766f6f !important; /* Set the text color to the desired shade */
     font-size: 14px;
     font-weight: bold;
     text-align: center;
@@ -507,19 +495,20 @@ button.btn-outline-success:hover {
     margin-bottom: 5px;
     display: block;
     font-size: 24px;
-    color: #fff !important;
+    color: #fff !important; /* Set the icon color to the desired shade */
 }
 
 .nav-pills .nav-link.active {
-    background-color: #766f6f !important;
-    color: #fff !important;
+    background-color: #766f6f !important; /* Active tab background color */
+    color: #fff !important; /* White text for active tab */
     border-radius: 8px;
 }
 
 .nav-pills .nav-link:hover {
-    background-color: #5e5c5c !important;
-    color: #000 !important;
+    background-color: #5e5c5c !important; /* Slightly darker shade for hover effect */
+    color: #000 !important; /* White text on hover */
 }
+
 
 /* Product Cards */
 .product-card {
@@ -528,7 +517,7 @@ button.btn-outline-success:hover {
     display: flex;
     align-items: center;
     padding: 15px;
-    position: relative;
+    position: relative; /* Allows for absolute positioning of price */
     transition: all 0.3s ease;
 }
 
@@ -547,19 +536,19 @@ button.btn-outline-success:hover {
 
 .product-info {
     padding-left: 15px;
-    max-width: 70%;
+    max-width: 70%; /* Limit the width of product info */
 }
 
 .product-info h5 {
     font-size: 18px;
     font-weight: bold;
     margin: 0 0 10px;
-    color: #000;
+    color: #000; /* Product name color set to black */
 }
 
 .product-info small {
     font-style: italic;
-    color: #000;
+    color: #000; /* Description text color set to black */
 }
 
 /* Price Container */
@@ -573,7 +562,7 @@ button.btn-outline-success:hover {
 .product-price p {
     font-size: 14px;
     margin: 5px 0;
-    color: #000;
+    color: #000; /* Price text color set to black */
 }
 
 .product-price p span {
@@ -585,8 +574,9 @@ button.btn-outline-success:hover {
     padding-top: 20px;
 }
 
+/* Make all text inside the tab content black */
 .tab-pane {
-    color: #000;
+    color: #000; /* Set all text inside the tab content to black */
 }
 
 /* Responsive Design */
@@ -606,7 +596,7 @@ button.btn-outline-success:hover {
     }
 
     .product-price {
-        position: static;
+        position: static; /* Make price stack below in smaller screen */
         text-align: center;
         margin-top: 10px;
     }
@@ -632,25 +622,16 @@ button.btn-outline-success:hover {
 
 
 
-
 /* Bread section start */
-/* Bread Section Styles */
 #bread {
     width: 100%;
     padding: 60px 20px;
     background-color: #111; /* Black background for the bread section */
-    background-image: url('images/wallpaper.jpg'); /* Path to your image */
-    background-size: cover; /* Ensure the image covers the section */
-    background-position: center; /* Center the image */
     color: #f4f4f4; /* White text */
-    position: relative; /* Allows the background image to be positioned */
-    z-index: 1; /* Ensures background is behind content */
 }
 
 #bread .container {
     text-align: center;
-    position: relative; /* Ensures text is above the background */
-    z-index: 2; /* Makes sure the container text stays on top of the background */
 }
 
 #bread .heading {
@@ -658,10 +639,6 @@ button.btn-outline-success:hover {
     font-weight: bold;
     margin-bottom: 30px;
     color: #f4f4f4; /* Accent color for the heading */
-}
-
-#bread .heading span {
-    color: #f4f4f4; /* Accent color for "Breads" */
 }
 
 #bread .row {
@@ -674,47 +651,62 @@ button.btn-outline-success:hover {
 /* Bread Item Styling */
 #bread .bread-item {
     text-align: center;
-    background-color: #fff; /* Yellow background for the bread items */
-    border-radius: 12px; /* Slightly smaller border-radius for a more compact look */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Softer shadow */
-    padding: 10px; /* Reduced padding for a more compact box */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff; /* White background for the bread items */
+    border-radius: 12px; /* Border radius for a smooth look */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 10px; /* Padding for spacing */
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Align items to the top */
+    justify-content: center; /* Centers items */
+    align-items: center; /* Centers items */
+    position: relative; /* To position description behind the image */
     flex: 0 0 30%; /* Bread items take up 30% of the row */
     margin-bottom: 20px;
-}
-
-#bread .bread-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+    overflow: hidden; /* Ensures that no elements overflow the bread item */
+    height: 450px; /* Increased height to make the image bigger */
 }
 
 /* Image Styling */
 .bread-img {
     width: 100%;
-    height: auto; /* Maintains image aspect ratio */
-    object-fit: contain; /* Ensures the image fits well within the container */
+    height: 100%; /* Make the image fill the container height */
+    object-fit: cover; /* Ensures the image covers the whole container */
     border-radius: 8px;
-    margin-bottom: 5px; /* Reduced space between image and text */
-    max-height: 250px; /* Prevents images from becoming too large */
-    object-position: center; /* Keeps the image centered if there’s empty space */
+    transition: opacity 0.3s ease; /* Smooth transition for image */
 }
 
-/* Heading Styling for Items */
-#bread h4 {
+/* Description Styling (Hidden by Default) */
+.bread-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: #fff; /* White text */
+    opacity: 0; /* Initially hidden */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 12px; /* Match the bread item's border radius */
+    flex-direction: column;
+    text-align: center;
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+}
+
+/* Show Description when hovered */
+.bread-item:hover .bread-back {
+    opacity: 1; /* Make the description visible when hovered */
+}
+
+.bread-description h4 {
     font-size: 20px;
-    color: #000; /* Darker text for bread name */
-    margin-top: 5px; /* Reduced space between image and heading */
+    margin-bottom: 10px;
 }
 
-/* Price Styling for Items */
-#bread p {
+.bread-description p {
     font-size: 16px;
-    color: #000; /* Accent color for price */
-    margin-top: 0px; /* Remove the space between the name and price */
-    padding-top: 0px; /* Ensure no padding is added */
+    margin: 5px 0;
 }
 
 /* Mobile responsiveness */
@@ -724,8 +716,12 @@ button.btn-outline-success:hover {
         align-items: center;
     }
 
+    #bread .bread-item {
+        flex: 0 0 45%; /* Bread items take up more space on medium screens */
+    }
+
     .bread-img {
-        max-height: 200px; /* Adjust image height for smaller screens */
+        max-height: 300px; /* Adjust image height for smaller screens */
     }
 
     #bread h4 {
@@ -734,10 +730,6 @@ button.btn-outline-success:hover {
 
     #bread p {
         font-size: 16px;
-    }
-
-    #bread .bread-item {
-        flex: 0 0 45%; /* Bread items take up more space on medium screens */
     }
 }
 
@@ -758,15 +750,22 @@ button.btn-outline-success:hover {
 /* Bread section end */
 
 
+
+
+/* Our Gallery Start */
+/* Global Styles */
+body {
+    background-color: black !important; /* Black background for the entire page */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
 /* Gallery Section Styles */
 #gallery {
     width: 100%;
     background-color: #111; /* Black background for gallery section */
-    background-image: url('images/wallpaper.jpg'); /* Path to your background image */
-    background-size: cover; /* Ensure the background image covers the section */
-    background-position: center; /* Center the background image */
     padding: 25px 0; /* Add padding for spacing */
-    color: #f4f4f4; /* Set color for text */
 }
 
 .heading5 {
@@ -844,10 +843,7 @@ button.btn-outline-success:hover {
 /* Testimonial Section Styling */
 .review-section {
     padding: 50px 0 30px; /* Reduced bottom padding */
-    background: var(--light-pink-color); /* Optional solid background color */
-    background-image: url('images/wallpaper.jpg'); /* Path to your background image */
-    background-size: cover; /* Ensure the background image covers the section */
-    background-position: center; /* Center the image */
+    background: var(--light-pink-color);
     color: white; /* Default text color */
 }
 
@@ -990,135 +986,37 @@ body {
     border-radius: 10px;
 }
 
-/* Contact Form Section */
-.contact-form .heading6 {
-    font-size: 32px;
-    color: #000; /* White text */
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.contact-form .heading6 span {
-    color: #000; /* Highlighted orange color */
-}
-
-.contact-form p {
-    color: #000;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.contact-form form input,
-.contact-form form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-}
-
-.contact-form form button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #888381; /* Orange button */
-    color: #000;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.contact-form form button:hover {
-    background-color: #000; /* Slightly darker orange on hover */
-}
-/* Contact Info Section */
-.contact-info {
+/* Main Contact Container */
+.contact-container {
     display: flex;
-    flex-direction: column; /* Stack heading and content vertically */
-    justify-content: flex-start; /* Align content at the top */
-    align-items: center; /* Center horizontally */
-    text-align: center; /* Center text alignment */
-    color: #000; /* Black text */
-    padding: 20px; /* Add padding for spacing */
-    max-width: 600px; /* Limit width for readability */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Limit container width */
     margin: auto; /* Center horizontally */
-    height: 100%; /* Ensure the section stretches */
+    flex-direction: column;
 }
 
-/* Heading Styles */
-.contact-info h1 {
-    font-size: 32px; /* Adjust font size */
-    color: #000; /* Black text */
-    margin-bottom: 20px; /* Add space below the heading */
-    width: 100%; /* Full width for alignment */
-    text-align: center; /* Center-align the heading */
-}
-
-/* Social Icons Container */
-.contact-info .social-icons-container {
+/* Contact Box (Holds Form and Info) */
+.contact-box {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    gap: 15px; /* Add spacing between items */
-    width: 100%; /* Take full width */
+    flex-direction: column;
+    gap: 30px; /* Spacing between form and info */
+    width: 100%; /* Full width */
 }
 
-/* Social Icons Links */
-.contact-info .social-icons-container a {
-    display: flex; /* Align icon and text side by side */
-    align-items: center; /* Vertically align items */
-    justify-content: center; /* Center align links horizontally */
-    color: #000; /* Black color for links */
-    text-decoration: none; /* Remove underline */
-    margin-bottom: 10px; /* Add space between links */
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-/* Hover Effect */
-.contact-info .social-icons-container a:hover {
-    color: #000; /* Change color on hover */
-}
-
-/* Icon Styles */
-.contact-info .social-icons-container i {
-    margin-right: 10px; /* Add space between icon and text */
-    font-size: 20px; /* Adjust icon size */
-}
-
-/* Responsive Design for Contact Info */
-@media screen and (max-width: 768px) {
-    .contact-info {
-        max-width: 90%; /* Adjust width for smaller screens */
-        padding: 10px;
-    }
-
-    .contact-info h1 {
-        font-size: 28px; /* Reduce heading size */
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .contact-info h1 {
-        font-size: 24px; /* Further reduce heading size */
-    }
-
-    .contact-info .social-icons-container i {
-        font-size: 18px; /* Adjust icon size */
-    }
-}
-
-/* Contact Form Styling */
+/* Contact Form */
 .contact-form {
-    width: 100%; /* Ensure the form takes the full width of its container */
-    max-width: 600px; /* Limit the width for readability */
-    margin: auto; /* Center the form horizontally */
-    padding: 20px; /* Add padding around the form */
-    background-color: #f9f9f9; /* Light background for the form */
-    border-radius: 10px; /* Rounded corners for a soft look */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a light shadow for depth */
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Heading for Contact Form */
 .contact-form .heading6 {
     font-size: 32px;
     font-weight: bold;
@@ -1128,28 +1026,27 @@ body {
 }
 
 .contact-form .heading6 span {
-    color: #000; /* Color for the "US" part */
+    color: #000; /* Highlighted color for "US" */
 }
 
-/* Form Description Text */
 .contact-form p {
     font-size: 16px;
-    color: #333;
+    color: #555;
     margin-bottom: 20px;
     text-align: center;
 }
 
-/* Input Fields and Textarea */
-.contact-form .form-control {
+/* Input Fields */
+.form-control {
     width: 100%; /* Full width of container */
     padding: 15px; /* Add padding inside each field */
     margin-bottom: 15px; /* Space between fields */
-    border: 2px solid #000; /* Black border around the fields */
+    border: 1px solid #ddd; /* Light border */
     background-color: #f5f5f5; /* Light gray background for visibility */
     font-size: 16px; /* Larger font for readability */
     color: #000; /* Dark text inside fields */
     border-radius: 5px; /* Rounded corners */
-    box-sizing: border-box; /* Include padding in the width calculation */
+    box-sizing: border-box; /* Include padding in width */
 }
 
 /* Message Box (textarea) */
@@ -1161,34 +1058,77 @@ body {
 /* Submit Button */
 #contact-btn {
     width: 100%; /* Full width button */
-    padding: 15px;
-    font-size: 18px;
+    padding: 12px;
+    font-size: 16px;
     background-color: #000; /* Button background color */
-    color: #fff; /* Text color */
+    color: #fff; /* White text */
     border: none; /* Remove border */
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
     transition: background-color 0.3s ease; /* Smooth hover transition */
 }
 
-/* Button Hover Effect */
 #contact-btn:hover {
-    background-color: #000; /* Change to a darker shade on hover */
+    background-color: #444; /* Darker background on hover */
 }
 
-/* Responsive Design for Contact Form */
+/* Contact Info */
+.contact-info {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-info h1 {
+    font-size: 28px; /* Adjust font size */
+    color: #333; /* Darker text for headings */
+    margin-bottom: 15px; /* Space below heading */
+}
+
+/* Social Icons Container */
+.social-icons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spacing between items */
+    width: 100%; /* Full width */
+}
+
+.social-icons-container a {
+    display: flex; /* Align icon and text side by side */
+    align-items: center; /* Vertically align items */
+    justify-content: center; /* Center align links horizontally */
+    color: #000; /* Dark color for links */
+    text-decoration: none; /* Remove underline */
+    gap: 10px; /* Space between icon and text */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.social-icons-container a:hover {
+    color: #888381; /* Change to grayish color on hover */
+}
+
+.social-icons-container i {
+    font-size: 20px; /* Adjust icon size */
+}
+
+/* Responsive Design */
 @media screen and (max-width: 768px) {
-    .contact-form {
-        max-width: 90%; /* Adjust the form width for smaller screens */
-        padding: 15px; /* Reduce padding for smaller screens */
+    .contact-box {
+        flex-direction: column; /* Stack form and info vertically */
+    }
+
+    .contact-container {
+        padding: 15px; /* Adjust padding for smaller screens */
     }
 
     .contact-form .heading6 {
         font-size: 28px; /* Smaller heading size */
     }
 
-    .contact-form .form-control {
-        font-size: 14px; /* Smaller font size for input fields */
+    .form-control {
+        font-size: 14px; /* Adjust input font size for smaller screens */
     }
 }
 
@@ -1197,21 +1137,24 @@ body {
         font-size: 24px; /* Further reduce heading size */
     }
 
-    .contact-form .form-control i {
+    .social-icons-container i {
         font-size: 18px; /* Adjust icon size */
+    }
+
+    .contact-info h1 {
+        font-size: 24px; /* Smaller heading size */
     }
 }
 
 /* Footer Section */
 footer {
-    background-color: #000; /* Black background for footer */
-    color: #fff; /* White text */
+    color: #000; /* White text */
     text-align: center;
     padding: 20px 0;
 }
 
 footer .social-icons-container a {
-    color: #fff;
+    color: #000;
     margin: 0 10px;
     transition: color 0.3s;
 }
