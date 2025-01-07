@@ -51,11 +51,11 @@
     </div>
 </nav>
 <!-- Navbar End -->
-        
-  
+
+
 </header>
     <div class="all-content">
-    
+
 
         <!-- home section start -->
         <section id="home">
@@ -76,15 +76,15 @@
        <section id="about">
             <!-- Heading at the top -->
             <div class="heading">ABOUT <span>US</span></div>
-            
+
             <!-- Main Content Container -->
             <div class="container">
                 <!-- Image Section -->
                 <div class="card">
                     <img src="./images/content01.jpg" alt="A cup of happiness">
                 </div>
-        
-                <!-- Text Content Section --> 
+
+                <!-- Text Content Section -->
                 <div class="text-content">
                     <h3>Whats Makes Our Coffee Special?</h3>
                     <p>
@@ -149,7 +149,7 @@
                 <div class="item-back">
                     <h3>Caramel Macchiato</h3>
                     <p>Deliciously smooth, perfectly sweet, and rich, with a beautiful touch of latte art in every cup.</p>
-                    <div class="price">$19.99</div>                    
+                    <div class="price">$19.99</div>
                 </div>
             </div>
         </div>
@@ -166,7 +166,7 @@
                     <h3>French Fries</h3>
                     <p>Crispy, golden, and perfectly seasoned these fries are the ultimate snack, hot and satisfying with every bite.</p>
                     <div class="price">$19.99</div>
-                    
+
             </div>
         </div>
     </div>
@@ -312,7 +312,7 @@
                                 <p>Large: <span>₱55.00</span></p>
                             </div>
                             <small class="fst-italic text-black">
-                                A delicious blend of rich coffee, sweet caramel, and creamy milk, 
+                                A delicious blend of rich coffee, sweet caramel, and creamy milk,
                                 served chilled over ice for a smooth, indulgent taste.</small>
                             </small>
                         </div>
@@ -491,7 +491,7 @@
 
 
 
-          
+
 <!-- Bread Section Start -->
 <section id="bread">
     <div class="container">
@@ -594,7 +594,7 @@
                         <p>Crispy, golden French fries that are perfectly seasoned for a satisfying crunch in every bite.</p>
                         <p>Regular: <span>₱35.00</span></p>
                         <p>Medium: <span>₱45.00</span></p>
-                        <p>Large: <span>₱55.00</span></p>                        
+                        <p>Large: <span>₱55.00</span></p>
                     </div>
                 </div>
             </div>
@@ -648,7 +648,7 @@
                     </div>
                 </div>
             </div>
-        
+
         <!-- our gallery end -->
 
 
@@ -691,8 +691,8 @@
                     <h3 class="name">Stephene De Benito</h3>
                     <i class="feedback"> Kape palang solve kana, sakto lng sa timpla at panlasa.</i>
                 </li>
-            </ul> 
-            
+            </ul>
+
             <div class="swiper-pagination"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
@@ -784,7 +784,7 @@
             </a>
         </div>
         <!-- Footer Text -->
-        <p>&copy; 325 KAFEY 2023. All Rights Reserved.</p>
+        <p>&copy; GROUP 3 2025. All Rights Reserved.</p>
     </div>
 </footer>
 
@@ -823,7 +823,7 @@ const visibleCards = Math.floor(document.querySelector('.slider-container').offs
 
 function moveSlide(direction) {
     const maxIndex = cards.length - visibleCards; // Maximum index to slide
-    
+
     // Calculate new index
     currentIndex += direction;
     if (currentIndex < 0) {
@@ -831,7 +831,7 @@ function moveSlide(direction) {
     } else if (currentIndex > maxIndex) {
         currentIndex = maxIndex; // Prevent sliding beyond the last visible cards
     }
-    
+
     // Move the slider track
     const offset = -currentIndex * cardWidth;
     track.style.transform = `translateX(${offset}px)`;
@@ -855,7 +855,7 @@ function moveSlide(direction) {
                 header.style.backgroundColor = "#000"; // Darken the navbar when scrolling
             } else {
                 header.style.backgroundColor = " #000"; // Reset background color
-                
+
             }
         };
                 </script>
@@ -863,19 +863,19 @@ function moveSlide(direction) {
                     const searchForm = document.getElementById('search-form');
                     const searchInput = document.getElementById('search-input');
                     const searchButton = document.getElementById('search-button');
-                
+
                     searchForm.addEventListener('submit', (event) => {
                         event.preventDefault(); // Prevent page reload
-                
+
                         const searchTerm = searchInput.value.trim();
-                
+
                         if (searchTerm !== "") {
                             // Here you would add your search logic
                             // For example, you could:
-                            // 1. Send an AJAX request to a server-side script 
+                            // 1. Send an AJAX request to a server-side script
                             // 2. Filter your product list on the client-side
                             // 3. Redirect to a search results page
-                
+
                             console.log("Search Term:", searchTerm); // Temporary log
                         } else {
                             alert("Please enter a search term.");
